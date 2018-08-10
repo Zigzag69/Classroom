@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Classroom" customModuleProvider="target">
             <connections>
+                <outlet property="navigationBar" destination="xjA-nx-zsc" id="BhC-53-Ybh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,27 +21,31 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7K-CY-ny8">
-                    <rect key="frame" x="0.0" y="24" width="375" height="44"/>
-                    <items>
-                        <navigationItem title="Title" id="C9e-4k-kVt"/>
-                    </items>
-                </navigationBar>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="VAp-TD-qEt">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="24"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-fR-Fn7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="24" id="lHb-a1-xgU"/>
+                        <constraint firstAttribute="height" constant="68" id="62U-pc-6xv"/>
                     </constraints>
                 </imageView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-nx-zsc">
+                    <rect key="frame" x="0.0" y="24" width="375" height="44"/>
+                    <textAttributes key="titleTextAttributes">
+                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </textAttributes>
+                    <items>
+                        <navigationItem title="Homework details" id="XaB-fN-EzK"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="VAp-TD-qEt" secondAttribute="trailing" id="Doj-Ei-ec9"/>
-                <constraint firstItem="VAp-TD-qEt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="JoL-nO-Ajj"/>
-                <constraint firstItem="VAp-TD-qEt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Rjd-oh-fkP"/>
-                <constraint firstItem="N7K-CY-ny8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bSa-WU-kyU"/>
-                <constraint firstItem="N7K-CY-ny8" firstAttribute="top" secondItem="VAp-TD-qEt" secondAttribute="bottom" id="dSk-h3-b3O"/>
-                <constraint firstItem="N7K-CY-ny8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hG4-qq-8s5"/>
+                <constraint firstItem="oNB-fR-Fn7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1dO-4i-dPd"/>
+                <constraint firstItem="xjA-nx-zsc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="810-pr-ynW"/>
+                <constraint firstItem="xjA-nx-zsc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AOh-dL-nNf"/>
+                <constraint firstItem="oNB-fR-Fn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rQL-5I-GBI"/>
+                <constraint firstItem="xjA-nx-zsc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="w8a-YY-ziH"/>
+                <constraint firstItem="oNB-fR-Fn7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xBk-LL-dcH"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="72.5" y="59.5"/>

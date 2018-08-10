@@ -9,6 +9,7 @@
 import UIKit
 
 class MainVC: UIViewController {
+    @IBOutlet weak var navigationBar: UINavigationBar!
     
 //MARK: - Life cycle
     override func viewDidLoad() {
@@ -21,5 +22,7 @@ class MainVC: UIViewController {
     func preparations() {
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .blackOpaque
+        navigationBar.setBackgroundImage(#imageLiteral(resourceName: "gadient 1px"),
+                                         for: .default)
     }
 }
