@@ -44,18 +44,42 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMC-Ug-vdp" userLabel="Classroom View">
+                    <rect key="frame" x="0.0" y="68" width="375" height="599"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2s-GQ-2uA" userLabel="Scroll Content">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="599"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="599" id="zUN-s4-mWC"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="o2s-GQ-2uA" secondAttribute="trailing" id="1U7-dO-OAL"/>
+                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="leading" secondItem="EMC-Ug-vdp" secondAttribute="leading" id="8sG-AH-fvF"/>
+                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="height" secondItem="EMC-Ug-vdp" secondAttribute="height" priority="750" id="Nle-V8-vWC"/>
+                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="top" secondItem="EMC-Ug-vdp" secondAttribute="top" id="rgK-2V-xgF"/>
+                        <constraint firstAttribute="bottom" secondItem="o2s-GQ-2uA" secondAttribute="bottom" id="tpx-ec-FWe"/>
+                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="width" secondItem="EMC-Ug-vdp" secondAttribute="width" id="yv8-XJ-Z45"/>
+                    </constraints>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="oNB-fR-Fn7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1dO-4i-dPd"/>
                 <constraint firstItem="xjA-nx-zsc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="810-pr-ynW"/>
                 <constraint firstItem="xjA-nx-zsc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AOh-dL-nNf"/>
+                <constraint firstItem="EMC-Ug-vdp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Aqn-Jy-SSh"/>
+                <constraint firstItem="EMC-Ug-vdp" firstAttribute="top" secondItem="oNB-fR-Fn7" secondAttribute="bottom" id="Ed9-5K-mvs"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EMC-Ug-vdp" secondAttribute="bottom" id="beD-ng-VYm"/>
                 <constraint firstItem="oNB-fR-Fn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rQL-5I-GBI"/>
                 <constraint firstItem="xjA-nx-zsc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="w8a-YY-ziH"/>
                 <constraint firstItem="oNB-fR-Fn7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xBk-LL-dcH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EMC-Ug-vdp" secondAttribute="trailing" id="zYV-uE-PFv"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="72.5" y="59.5"/>
+            <point key="canvasLocation" x="82.5" y="580.5"/>
         </view>
     </objects>
     <resources>
