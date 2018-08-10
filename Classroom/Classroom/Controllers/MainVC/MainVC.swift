@@ -9,7 +9,7 @@
 import UIKit
 
 class MainVC: UIViewController {
-
+    
 //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +20,6 @@ class MainVC: UIViewController {
 //MARK: - UI Preparations
     func preparations() {
         navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .blackOpaque
     }
 }
