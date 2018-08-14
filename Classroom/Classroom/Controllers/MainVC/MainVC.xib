@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,79 +12,46 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Classroom" customModuleProvider="target">
             <connections>
-                <outlet property="navigationBar" destination="xjA-nx-zsc" id="BhC-53-Ybh"/>
+                <outlet property="navigationBar" destination="MHp-18-9q4" id="BE2-eV-9j9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="oNB-fR-Fn7">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="94r-kn-Qci">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="68" id="62U-pc-6xv"/>
+                        <constraint firstAttribute="height" constant="68" id="utn-kT-xBl"/>
                     </constraints>
                 </imageView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xjA-nx-zsc">
-                    <rect key="frame" x="0.0" y="48" width="375" height="44"/>
+                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHp-18-9q4">
+                    <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                     <textAttributes key="titleTextAttributes">
-                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="16"/>
-                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="VerdanaPro-Bold" family="Verdana Pro" pointSize="16"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Homework details" id="XaB-fN-EzK">
-                            <barButtonItem key="leftBarButtonItem" image="icBack" style="done" id="ctc-zd-Ugs">
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" image="icMoreHorWht" id="uXG-SY-iGF">
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </barButtonItem>
-                        </navigationItem>
+                        <navigationItem title="Homework details" id="4xs-4g-z2P"/>
                     </items>
                 </navigationBar>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EMC-Ug-vdp" userLabel="Classroom View">
-                    <rect key="frame" x="0.0" y="68" width="375" height="710"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o2s-GQ-2uA" userLabel="Scroll Content">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="710"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="599" id="zUN-s4-mWC"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="o2s-GQ-2uA" secondAttribute="trailing" id="1U7-dO-OAL"/>
-                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="leading" secondItem="EMC-Ug-vdp" secondAttribute="leading" id="8sG-AH-fvF"/>
-                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="height" secondItem="EMC-Ug-vdp" secondAttribute="height" priority="750" id="Nle-V8-vWC"/>
-                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="top" secondItem="EMC-Ug-vdp" secondAttribute="top" id="rgK-2V-xgF"/>
-                        <constraint firstAttribute="bottom" secondItem="o2s-GQ-2uA" secondAttribute="bottom" id="tpx-ec-FWe"/>
-                        <constraint firstItem="o2s-GQ-2uA" firstAttribute="width" secondItem="EMC-Ug-vdp" secondAttribute="width" id="yv8-XJ-Z45"/>
-                    </constraints>
-                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="oNB-fR-Fn7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="1dO-4i-dPd"/>
-                <constraint firstItem="xjA-nx-zsc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="4" id="810-pr-ynW"/>
-                <constraint firstItem="xjA-nx-zsc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AOh-dL-nNf"/>
-                <constraint firstItem="EMC-Ug-vdp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Aqn-Jy-SSh"/>
-                <constraint firstItem="EMC-Ug-vdp" firstAttribute="top" secondItem="oNB-fR-Fn7" secondAttribute="bottom" id="Ed9-5K-mvs"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EMC-Ug-vdp" secondAttribute="bottom" id="beD-ng-VYm"/>
-                <constraint firstItem="oNB-fR-Fn7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rQL-5I-GBI"/>
-                <constraint firstItem="xjA-nx-zsc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="w8a-YY-ziH"/>
-                <constraint firstItem="oNB-fR-Fn7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xBk-LL-dcH"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EMC-Ug-vdp" secondAttribute="trailing" id="zYV-uE-PFv"/>
+                <constraint firstItem="94r-kn-Qci" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="1em-0i-ZF9"/>
+                <constraint firstItem="MHp-18-9q4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="2" id="8Yo-Xp-fva"/>
+                <constraint firstItem="MHp-18-9q4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Gz8-z3-jnU"/>
+                <constraint firstItem="MHp-18-9q4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WXm-SI-ZSE"/>
+                <constraint firstItem="94r-kn-Qci" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="WmJ-6s-PSS"/>
+                <constraint firstItem="94r-kn-Qci" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vwi-uE-ceN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="82.5" y="580.5"/>
+            <point key="canvasLocation" x="82.5" y="579.5"/>
         </view>
     </objects>
     <resources>
         <image name="gadient 1px" width="375" height="1"/>
-        <image name="icBack" width="24" height="24"/>
-        <image name="icMoreHorWht" width="24" height="24"/>
     </resources>
 </document>
