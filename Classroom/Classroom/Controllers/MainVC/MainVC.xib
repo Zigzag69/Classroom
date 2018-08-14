@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VerdanaPro-Regular.ttf">
+            <string>VerdanaPro-Regular</string>
+        </array>
+        <array key="VerdanaPro-SemiBold.ttf">
+            <string>VerdanaPro-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Classroom" customModuleProvider="target">
             <connections>
@@ -47,19 +55,87 @@
                         <constraint firstAttribute="height" constant="2" id="B9A-aj-x96"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathematics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2r-OV-pyt">
+                    <rect key="frame" x="16" y="112" width="136.33333333333334" height="24.333333333333343"/>
+                    <fontDescription key="fontDescription" name="VerdanaPro-SemiBold" family="Verdana Pro" pointSize="20"/>
+                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pyV-mF-O7Z">
+                    <rect key="frame" x="16" y="152.33333333333334" width="343" height="120.00000000000003"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="4yc-b2-AMC"/>
+                    </constraints>
+                    <string key="text">When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. </string>
+                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCalendarPicker" translatesAutoresizingMaskIntoConstraints="NO" id="yfy-00-bYW">
+                    <rect key="frame" x="16" y="292.33333333333331" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Mh9-10-m7T"/>
+                        <constraint firstAttribute="width" constant="24" id="hI6-Pk-pKT"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-7n-pvq">
+                    <rect key="frame" x="56.000000000000007" y="292" width="73.666666666666686" height="20"/>
+                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
+                    <color key="textColor" red="0.49019607843137253" green="0.49411764705882355" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 23 June 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14F-J4-sna">
+                    <rect key="frame" x="56" y="316" width="146" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDS-z0-e3R">
+                    <rect key="frame" x="56.000000000000007" y="357" width="73.666666666666686" height="20"/>
+                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
+                    <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icTimePicker" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-Oq-YkO">
+                    <rect key="frame" x="16" y="357" width="24" height="24"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piC-d4-h9b">
+                    <rect key="frame" x="56" y="381" width="47.666666666666657" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="MHp-18-9q4" firstAttribute="top" secondItem="y8p-V5-7cs" secondAttribute="bottom" id="5er-MV-RCK"/>
+                <constraint firstItem="GDS-z0-e3R" firstAttribute="top" secondItem="14F-J4-sna" secondAttribute="bottom" constant="20" id="78o-Cs-MNX"/>
+                <constraint firstItem="N2r-OV-pyt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8ec-JD-LC6"/>
                 <constraint firstItem="XAq-Le-UDu" firstAttribute="top" secondItem="MHp-18-9q4" secondAttribute="bottom" id="CYG-SF-n2H"/>
                 <constraint firstItem="MHp-18-9q4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DJm-7M-zEP"/>
+                <constraint firstItem="pyV-mF-O7Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ECi-jC-aBx"/>
+                <constraint firstItem="Xdq-Oq-YkO" firstAttribute="top" secondItem="14F-J4-sna" secondAttribute="bottom" constant="20" id="GhP-tp-PuM"/>
+                <constraint firstItem="GDS-z0-e3R" firstAttribute="leading" secondItem="Xdq-Oq-YkO" secondAttribute="trailing" constant="16" id="MQM-Qx-FOz"/>
+                <constraint firstItem="yfy-00-bYW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Wrp-kU-CnK"/>
+                <constraint firstItem="piC-d4-h9b" firstAttribute="leading" secondItem="Xdq-Oq-YkO" secondAttribute="trailing" constant="16" id="bUe-8S-CPC"/>
+                <constraint firstItem="pyV-mF-O7Z" firstAttribute="top" secondItem="N2r-OV-pyt" secondAttribute="bottom" constant="16" id="d2G-gZ-MgV"/>
+                <constraint firstItem="Yeo-7n-pvq" firstAttribute="leading" secondItem="yfy-00-bYW" secondAttribute="trailing" constant="16" id="fxk-lR-5MZ"/>
                 <constraint firstAttribute="trailing" secondItem="XAq-Le-UDu" secondAttribute="trailing" id="h1t-76-WDm"/>
+                <constraint firstItem="piC-d4-h9b" firstAttribute="top" secondItem="GDS-z0-e3R" secondAttribute="bottom" constant="4" id="jFU-eU-zFe"/>
+                <constraint firstItem="N2r-OV-pyt" firstAttribute="top" secondItem="XAq-Le-UDu" secondAttribute="bottom" constant="20" id="l5a-zK-hCt"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pyV-mF-O7Z" secondAttribute="trailing" constant="16" id="qKc-UP-EtQ"/>
+                <constraint firstItem="Xdq-Oq-YkO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="qrR-c4-ewF"/>
                 <constraint firstItem="y8p-V5-7cs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r6n-4m-bHq"/>
                 <constraint firstItem="y8p-V5-7cs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s52-wU-XZs"/>
                 <constraint firstItem="MHp-18-9q4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tEO-fu-nnT"/>
+                <constraint firstItem="14F-J4-sna" firstAttribute="top" secondItem="Yeo-7n-pvq" secondAttribute="bottom" constant="4" id="vP1-j1-qhW"/>
+                <constraint firstItem="Yeo-7n-pvq" firstAttribute="top" secondItem="pyV-mF-O7Z" secondAttribute="bottom" constant="20" id="wpS-WK-0g1"/>
                 <constraint firstItem="MHp-18-9q4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="2" id="xb1-18-4fl"/>
+                <constraint firstItem="yfy-00-bYW" firstAttribute="top" secondItem="pyV-mF-O7Z" secondAttribute="bottom" constant="20" id="xoI-GS-C2b"/>
                 <constraint firstAttribute="trailing" secondItem="y8p-V5-7cs" secondAttribute="trailing" id="ySh-s8-elQ"/>
                 <constraint firstItem="XAq-Le-UDu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yVP-ak-2w1"/>
+                <constraint firstItem="14F-J4-sna" firstAttribute="leading" secondItem="yfy-00-bYW" secondAttribute="trailing" constant="16" id="zy9-6h-ovC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="82.5" y="579.5"/>
@@ -68,6 +144,8 @@
     <resources>
         <image name="gadient 1px" width="375" height="1"/>
         <image name="icBack" width="24" height="24"/>
+        <image name="icCalendarPicker" width="24" height="24"/>
         <image name="icMoreHorWht" width="24" height="24"/>
+        <image name="icTimePicker" width="24" height="24"/>
     </resources>
 </document>
