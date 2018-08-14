@@ -24,6 +24,10 @@ class MainVC: UIViewController {
         navigationController?.navigationBar.barStyle = .blackOpaque
         navigationBar.setBackgroundImage(#imageLiteral(resourceName: "gadient 1px"),
                                          for: .default)
+        navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+        navigationBar.layer.shadowRadius = 2
+        navigationBar.layer.shadowOpacity = 0.7
+        navigationBar.layer.shadowOffset = CGSize(width: 0, height: 5)
     }
 }
 

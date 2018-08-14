@@ -21,6 +21,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-V5-7cs" userLabel="Gradient 1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+                </imageView>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHp-18-9q4">
                     <rect key="frame" x="0.0" y="46" width="375" height="44"/>
                     <textAttributes key="titleTextAttributes">
@@ -28,17 +31,21 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Homework details" id="4xs-4g-z2P"/>
+                        <navigationItem title="Homework details" id="4xs-4g-z2P">
+                            <barButtonItem key="leftBarButtonItem" image="icBack" id="iNg-Jh-A3k">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" image="icMoreHorWht" id="VDz-wm-ucT">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </barButtonItem>
+                        </navigationItem>
                     </items>
                 </navigationBar>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="XAq-Le-UDu">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="XAq-Le-UDu" userLabel="Gradient 2">
                     <rect key="frame" x="0.0" y="90" width="375" height="2"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="2" id="B9A-aj-x96"/>
                     </constraints>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-V5-7cs">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,5 +67,7 @@
     </objects>
     <resources>
         <image name="gadient 1px" width="375" height="1"/>
+        <image name="icBack" width="24" height="24"/>
+        <image name="icMoreHorWht" width="24" height="24"/>
     </resources>
 </document>
