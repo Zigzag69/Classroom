@@ -9,18 +9,10 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="VerdanaPro-Regular.ttf">
-            <string>VerdanaPro-Regular</string>
-        </array>
-        <array key="VerdanaPro-SemiBold.ttf">
-            <string>VerdanaPro-SemiBold</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Classroom" customModuleProvider="target">
             <connections>
-                <outlet property="navigationBar" destination="MHp-18-9q4" id="BE2-eV-9j9"/>
+                <outlet property="navigationBar" destination="OVt-mN-HVw" id="G08-GM-INj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,167 +21,39 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-V5-7cs" userLabel="Gradient 1">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="22"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="T7n-8T-alc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                 </imageView>
-                <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHp-18-9q4">
-                    <rect key="frame" x="0.0" y="22" width="375" height="44"/>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVt-mN-HVw">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fKk-Lq-Xzc"/>
+                    </constraints>
                     <textAttributes key="titleTextAttributes">
                         <fontDescription key="fontDescription" name="VerdanaPro-Bold" family="Verdana Pro" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Homework details" id="4xs-4g-z2P">
-                            <barButtonItem key="leftBarButtonItem" image="icBack" id="iNg-Jh-A3k">
+                        <navigationItem title="Homework details" id="DTh-7N-da4">
+                            <barButtonItem key="leftBarButtonItem" image="icBack" id="Ybd-fR-zDl">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </barButtonItem>
-                            <barButtonItem key="rightBarButtonItem" image="icMoreHorWht" id="VDz-wm-ucT">
+                            <barButtonItem key="rightBarButtonItem" image="icMoreHorWht" id="qm0-7V-iKD">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gadient 1px" translatesAutoresizingMaskIntoConstraints="NO" id="XAq-Le-UDu" userLabel="Gradient 2">
-                    <rect key="frame" x="0.0" y="66" width="375" height="2"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="2" id="B9A-aj-x96"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathematics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2r-OV-pyt">
-                    <rect key="frame" x="16" y="88" width="136.5" height="24.5"/>
-                    <fontDescription key="fontDescription" name="VerdanaPro-SemiBold" family="Verdana Pro" pointSize="20"/>
-                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="pyV-mF-O7Z">
-                    <rect key="frame" x="16" y="128.5" width="343" height="120"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="120" id="4yc-b2-AMC"/>
-                    </constraints>
-                    <string key="text">When you enter into any new area of science, you almost always find yourself with a baffling new language of technical terms to learn before you can converse with the experts. </string>
-                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCalendarPicker" translatesAutoresizingMaskIntoConstraints="NO" id="yfy-00-bYW">
-                    <rect key="frame" x="16" y="268.5" width="24" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="24" id="Mh9-10-m7T"/>
-                        <constraint firstAttribute="width" constant="24" id="hI6-Pk-pKT"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yeo-7n-pvq">
-                    <rect key="frame" x="56" y="268" width="73.5" height="20"/>
-                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
-                    <color key="textColor" red="0.49019607843137253" green="0.49411764705882355" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 23 June 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14F-J4-sna">
-                    <rect key="frame" x="56" y="292" width="146" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDS-z0-e3R">
-                    <rect key="frame" x="56" y="333" width="73.5" height="20"/>
-                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
-                    <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icTimePicker" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-Oq-YkO">
-                    <rect key="frame" x="16" y="333" width="24" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="24" id="NEo-8V-Jvw"/>
-                        <constraint firstAttribute="width" constant="24" id="dHj-bp-2BX"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="piC-d4-h9b">
-                    <rect key="frame" x="56" y="357" width="47.5" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icReminder" translatesAutoresizingMaskIntoConstraints="NO" id="pCk-Xd-O6B">
-                    <rect key="frame" x="16" y="398" width="24" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="24" id="EbN-u2-mFd"/>
-                        <constraint firstAttribute="height" constant="24" id="q0r-yn-Z4R"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOj-ax-q3Z">
-                    <rect key="frame" x="56" y="398" width="105.5" height="20"/>
-                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
-                    <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWg-Ja-Cht">
-                    <rect key="frame" x="56" y="422" width="41" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icReminder" translatesAutoresizingMaskIntoConstraints="NO" id="9hq-hI-Yt3">
-                    <rect key="frame" x="16" y="463" width="24" height="24"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="24" id="pPr-bg-dKr"/>
-                        <constraint firstAttribute="width" constant="24" id="rgW-Vb-0TS"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set reminder 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jHR-GJ-J9L">
-                    <rect key="frame" x="56" y="463" width="121" height="20"/>
-                    <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
-                    <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCk-2y-9Wm">
-                    <rect key="frame" x="56" y="487" width="41" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="mOj-ax-q3Z" firstAttribute="top" secondItem="piC-d4-h9b" secondAttribute="bottom" constant="20" id="0HY-at-wzC"/>
-                <constraint firstItem="yWg-Ja-Cht" firstAttribute="leading" secondItem="pCk-Xd-O6B" secondAttribute="trailing" constant="16" id="2ck-M2-dJC"/>
-                <constraint firstItem="mOj-ax-q3Z" firstAttribute="leading" secondItem="pCk-Xd-O6B" secondAttribute="trailing" constant="16" id="3P3-H4-XxH"/>
-                <constraint firstItem="MHp-18-9q4" firstAttribute="top" secondItem="y8p-V5-7cs" secondAttribute="bottom" id="5er-MV-RCK"/>
-                <constraint firstItem="GDS-z0-e3R" firstAttribute="top" secondItem="14F-J4-sna" secondAttribute="bottom" constant="20" id="78o-Cs-MNX"/>
-                <constraint firstItem="N2r-OV-pyt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="8ec-JD-LC6"/>
-                <constraint firstItem="FCk-2y-9Wm" firstAttribute="top" secondItem="jHR-GJ-J9L" secondAttribute="bottom" constant="4" id="BhU-GG-uSn"/>
-                <constraint firstItem="XAq-Le-UDu" firstAttribute="top" secondItem="MHp-18-9q4" secondAttribute="bottom" id="CYG-SF-n2H"/>
-                <constraint firstItem="MHp-18-9q4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="DJm-7M-zEP"/>
-                <constraint firstItem="pyV-mF-O7Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="ECi-jC-aBx"/>
-                <constraint firstItem="Xdq-Oq-YkO" firstAttribute="top" secondItem="14F-J4-sna" secondAttribute="bottom" constant="20" id="GhP-tp-PuM"/>
-                <constraint firstItem="FCk-2y-9Wm" firstAttribute="leading" secondItem="9hq-hI-Yt3" secondAttribute="trailing" constant="16" id="LfE-ah-QHJ"/>
-                <constraint firstItem="GDS-z0-e3R" firstAttribute="leading" secondItem="Xdq-Oq-YkO" secondAttribute="trailing" constant="16" id="MQM-Qx-FOz"/>
-                <constraint firstItem="yWg-Ja-Cht" firstAttribute="top" secondItem="mOj-ax-q3Z" secondAttribute="bottom" constant="4" id="Rfh-q4-HM9"/>
-                <constraint firstItem="yfy-00-bYW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Wrp-kU-CnK"/>
-                <constraint firstItem="pCk-Xd-O6B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="X6T-ti-uZR"/>
-                <constraint firstItem="jHR-GJ-J9L" firstAttribute="leading" secondItem="9hq-hI-Yt3" secondAttribute="trailing" constant="16" id="XJM-gb-leJ"/>
-                <constraint firstItem="piC-d4-h9b" firstAttribute="leading" secondItem="Xdq-Oq-YkO" secondAttribute="trailing" constant="16" id="bUe-8S-CPC"/>
-                <constraint firstItem="pyV-mF-O7Z" firstAttribute="top" secondItem="N2r-OV-pyt" secondAttribute="bottom" constant="16" id="d2G-gZ-MgV"/>
-                <constraint firstItem="9hq-hI-Yt3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="fSy-Ec-dEM"/>
-                <constraint firstItem="Yeo-7n-pvq" firstAttribute="leading" secondItem="yfy-00-bYW" secondAttribute="trailing" constant="16" id="fxk-lR-5MZ"/>
-                <constraint firstAttribute="trailing" secondItem="XAq-Le-UDu" secondAttribute="trailing" id="h1t-76-WDm"/>
-                <constraint firstItem="piC-d4-h9b" firstAttribute="top" secondItem="GDS-z0-e3R" secondAttribute="bottom" constant="4" id="jFU-eU-zFe"/>
-                <constraint firstItem="N2r-OV-pyt" firstAttribute="top" secondItem="XAq-Le-UDu" secondAttribute="bottom" constant="20" id="l5a-zK-hCt"/>
-                <constraint firstItem="pCk-Xd-O6B" firstAttribute="top" secondItem="piC-d4-h9b" secondAttribute="bottom" constant="20" id="pih-6I-sdT"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pyV-mF-O7Z" secondAttribute="trailing" constant="16" id="qKc-UP-EtQ"/>
-                <constraint firstItem="Xdq-Oq-YkO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="qrR-c4-ewF"/>
-                <constraint firstItem="y8p-V5-7cs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r6n-4m-bHq"/>
-                <constraint firstItem="y8p-V5-7cs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s52-wU-XZs"/>
-                <constraint firstItem="MHp-18-9q4" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="tEO-fu-nnT"/>
-                <constraint firstItem="14F-J4-sna" firstAttribute="top" secondItem="Yeo-7n-pvq" secondAttribute="bottom" constant="4" id="vP1-j1-qhW"/>
-                <constraint firstItem="Yeo-7n-pvq" firstAttribute="top" secondItem="pyV-mF-O7Z" secondAttribute="bottom" constant="20" id="wpS-WK-0g1"/>
-                <constraint firstItem="MHp-18-9q4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="2" id="xb1-18-4fl"/>
-                <constraint firstItem="yfy-00-bYW" firstAttribute="top" secondItem="pyV-mF-O7Z" secondAttribute="bottom" constant="20" id="xoI-GS-C2b"/>
-                <constraint firstAttribute="trailing" secondItem="y8p-V5-7cs" secondAttribute="trailing" id="ySh-s8-elQ"/>
-                <constraint firstItem="XAq-Le-UDu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yVP-ak-2w1"/>
-                <constraint firstItem="jHR-GJ-J9L" firstAttribute="top" secondItem="yWg-Ja-Cht" secondAttribute="bottom" constant="20" id="yjy-0x-EYJ"/>
-                <constraint firstItem="9hq-hI-Yt3" firstAttribute="top" secondItem="yWg-Ja-Cht" secondAttribute="bottom" constant="20" id="zBq-Sf-MR6"/>
-                <constraint firstItem="14F-J4-sna" firstAttribute="leading" secondItem="yfy-00-bYW" secondAttribute="trailing" constant="16" id="zy9-6h-ovC"/>
+                <constraint firstItem="OVt-mN-HVw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6vK-5M-Drk"/>
+                <constraint firstItem="T7n-8T-alc" firstAttribute="bottom" secondItem="OVt-mN-HVw" secondAttribute="bottom" id="9iP-FD-PvP"/>
+                <constraint firstItem="T7n-8T-alc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BMd-rD-iKe"/>
+                <constraint firstItem="OVt-mN-HVw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Rp8-4d-6s5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="T7n-8T-alc" secondAttribute="trailing" id="b0l-Qj-uAt"/>
+                <constraint firstItem="T7n-8T-alc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h69-3t-Y4K"/>
+                <constraint firstItem="OVt-mN-HVw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zXJ-IB-HnQ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="82.5" y="579.5"/>
@@ -198,9 +62,6 @@
     <resources>
         <image name="gadient 1px" width="375" height="1"/>
         <image name="icBack" width="24" height="24"/>
-        <image name="icCalendarPicker" width="24" height="24"/>
         <image name="icMoreHorWht" width="24" height="24"/>
-        <image name="icReminder" width="24" height="24"/>
-        <image name="icTimePicker" width="24" height="24"/>
     </resources>
 </document>
