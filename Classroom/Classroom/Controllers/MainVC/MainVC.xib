@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Classroom" customModuleProvider="target">
             <connections>
+                <outlet property="gradient" destination="T7n-8T-alc" id="AnD-5p-E2R"/>
                 <outlet property="navigationBar" destination="OVt-mN-HVw" id="G08-GM-INj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

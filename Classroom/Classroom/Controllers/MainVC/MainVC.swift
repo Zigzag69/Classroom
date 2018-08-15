@@ -10,6 +10,7 @@ import UIKit
 
 class MainVC: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var gradient: UIImageView!
     
 //MARK: - Life cycle
     override func viewDidLoad() {
@@ -24,7 +25,10 @@ class MainVC: UIViewController {
         navigationController?.navigationBar.barStyle = .blackOpaque
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
-        
+        gradient.layer.shadowColor = UIColor.lightGray.cgColor
+        gradient.layer.shadowRadius = 2
+        gradient.layer.shadowOpacity = 0.5
+        gradient.layer.shadowOffset = CGSize(width: 0, height: 4)
     }
 }
 
