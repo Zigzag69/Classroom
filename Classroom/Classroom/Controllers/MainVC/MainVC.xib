@@ -20,6 +20,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainVC" customModule="Classroom" customModuleProvider="target">
             <connections>
+                <outlet property="classroomCV" destination="2O4-Is-2o3" id="RKC-cx-FNy"/>
                 <outlet property="gradient" destination="T7n-8T-alc" id="AnD-5p-E2R"/>
                 <outlet property="navigationBar" destination="OVt-mN-HVw" id="G08-GM-INj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -27,14 +28,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qbd-or-7k7" userLabel="Classroom View">
-                    <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="936"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwR-5r-SoL" userLabel="Scroll Content">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="936"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mathematics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y93-0a-M5B">
                                     <rect key="frame" x="16" y="20" width="136.5" height="24.5"/>
@@ -53,7 +54,7 @@
                                     <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCalendarPicker" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-i9-kcn">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCalendarPicker" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-i9-kcn">
                                     <rect key="frame" x="16" y="204.5" width="24" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="5E1-MT-PIu"/>
@@ -61,69 +62,85 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFn-UA-lKB">
-                                    <rect key="frame" x="56" y="204.5" width="73.5" height="20"/>
+                                    <rect key="frame" x="56" y="204.5" width="73.5" height="19"/>
                                     <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                     <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mon, 23 June 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLW-dx-HEY">
-                                    <rect key="frame" x="56" y="228.5" width="146" height="21"/>
+                                    <rect key="frame" x="56" y="227.5" width="146" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icTimePicker" translatesAutoresizingMaskIntoConstraints="NO" id="uUl-ex-xvn">
-                                    <rect key="frame" x="16" y="269.5" width="24" height="24"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icTimePicker" translatesAutoresizingMaskIntoConstraints="NO" id="uUl-ex-xvn">
+                                    <rect key="frame" x="16" y="268.5" width="24" height="24"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpa-Gy-Nab">
-                                    <rect key="frame" x="56" y="269" width="73.5" height="20"/>
+                                    <rect key="frame" x="56" y="268" width="73.5" height="19"/>
                                     <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                     <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1E-8S-ehy">
-                                    <rect key="frame" x="56" y="293" width="47.5" height="21"/>
+                                    <rect key="frame" x="56" y="291" width="47.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icReminder" translatesAutoresizingMaskIntoConstraints="NO" id="xF3-1T-5TB">
-                                    <rect key="frame" x="16" y="334" width="24" height="24"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icReminder" translatesAutoresizingMaskIntoConstraints="NO" id="xF3-1T-5TB">
+                                    <rect key="frame" x="16" y="332" width="24" height="24"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjq-Aq-Dke">
-                                    <rect key="frame" x="56" y="334" width="105.5" height="20"/>
+                                    <rect key="frame" x="56" y="332" width="105.5" height="19"/>
                                     <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                     <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8Q-bf-bnW">
-                                    <rect key="frame" x="56" y="358" width="41" height="21"/>
+                                    <rect key="frame" x="56" y="355" width="41" height="21"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icReminder" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-Yh-l2H">
-                                    <rect key="frame" x="16" y="399" width="24" height="24"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icReminder" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-Yh-l2H">
+                                    <rect key="frame" x="16" y="396" width="24" height="24"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set reminder 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fub-Uz-ejC">
-                                    <rect key="frame" x="56" y="399" width="121" height="20"/>
+                                    <rect key="frame" x="56" y="396" width="121" height="19"/>
                                     <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                     <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3YC-h3-v3D">
-                                    <rect key="frame" x="56" y="423" width="41" height="20.5"/>
+                                    <rect key="frame" x="56" y="419" width="41" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2O4-Is-2o3">
+                                    <rect key="frame" x="0.0" y="464" width="375" height="472"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kk8-WE-a4y">
+                                        <size key="itemSize" width="50" height="50"/>
+                                        <size key="headerReferenceSize" width="50" height="50"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="Khh-Zx-Na5"/>
+                                        <outlet property="delegate" destination="-1" id="Pv2-gZ-Wcv"/>
+                                    </connections>
+                                </collectionView>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="BFn-UA-lKB" firstAttribute="top" secondItem="doI-5A-oXh" secondAttribute="bottom" constant="20" id="0vl-43-eux"/>
+                                <constraint firstAttribute="trailing" secondItem="2O4-Is-2o3" secondAttribute="trailing" id="2lP-SZ-Fp5"/>
                                 <constraint firstItem="KLW-dx-HEY" firstAttribute="leading" secondItem="pZo-i9-kcn" secondAttribute="trailing" constant="16" id="3js-6s-a3a"/>
                                 <constraint firstItem="Y93-0a-M5B" firstAttribute="top" secondItem="bwR-5r-SoL" secondAttribute="top" constant="20" id="7uT-MI-aa7"/>
                                 <constraint firstItem="cpa-Gy-Nab" firstAttribute="leading" secondItem="uUl-ex-xvn" secondAttribute="trailing" constant="16" id="AQt-Yd-YC2"/>
+                                <constraint firstItem="2O4-Is-2o3" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" id="AsN-ro-YPS"/>
                                 <constraint firstItem="C1E-8S-ehy" firstAttribute="top" secondItem="cpa-Gy-Nab" secondAttribute="bottom" constant="4" id="B4m-UL-Vf6"/>
                                 <constraint firstItem="fub-Uz-ejC" firstAttribute="leading" secondItem="vG1-Yh-l2H" secondAttribute="trailing" constant="16" id="EFt-hX-HRb"/>
                                 <constraint firstItem="3YC-h3-v3D" firstAttribute="leading" secondItem="vG1-Yh-l2H" secondAttribute="trailing" constant="16" id="IWk-bL-t7Y"/>
@@ -131,6 +148,7 @@
                                 <constraint firstItem="t8Q-bf-bnW" firstAttribute="leading" secondItem="xF3-1T-5TB" secondAttribute="trailing" constant="16" id="KC1-tD-9Xx"/>
                                 <constraint firstItem="pZo-i9-kcn" firstAttribute="top" secondItem="doI-5A-oXh" secondAttribute="bottom" constant="20" id="Ksr-fZ-zSs"/>
                                 <constraint firstItem="t8Q-bf-bnW" firstAttribute="top" secondItem="sjq-Aq-Dke" secondAttribute="bottom" constant="4" id="OMF-7N-305"/>
+                                <constraint firstItem="2O4-Is-2o3" firstAttribute="top" secondItem="3YC-h3-v3D" secondAttribute="bottom" constant="24" id="PNo-BJ-E5R"/>
                                 <constraint firstItem="C1E-8S-ehy" firstAttribute="leading" secondItem="uUl-ex-xvn" secondAttribute="trailing" constant="16" id="Pz3-eE-GXj"/>
                                 <constraint firstItem="doI-5A-oXh" firstAttribute="top" secondItem="Y93-0a-M5B" secondAttribute="bottom" constant="20" id="Ssl-SS-CO3"/>
                                 <constraint firstItem="Y93-0a-M5B" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="XTe-W5-bX4"/>
@@ -140,6 +158,7 @@
                                 <constraint firstItem="3YC-h3-v3D" firstAttribute="top" secondItem="fub-Uz-ejC" secondAttribute="bottom" constant="4" id="hIm-L0-DFU"/>
                                 <constraint firstItem="cpa-Gy-Nab" firstAttribute="top" secondItem="KLW-dx-HEY" secondAttribute="bottom" constant="20" id="hcN-O2-3WV"/>
                                 <constraint firstItem="vG1-Yh-l2H" firstAttribute="top" secondItem="t8Q-bf-bnW" secondAttribute="bottom" constant="20" id="jHW-4u-T9n"/>
+                                <constraint firstAttribute="bottom" secondItem="2O4-Is-2o3" secondAttribute="bottom" id="kFW-81-DOV"/>
                                 <constraint firstItem="uUl-ex-xvn" firstAttribute="top" secondItem="KLW-dx-HEY" secondAttribute="bottom" constant="20" id="kdy-DZ-29h"/>
                                 <constraint firstItem="doI-5A-oXh" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="kfA-XY-QNn"/>
                                 <constraint firstItem="sjq-Aq-Dke" firstAttribute="top" secondItem="C1E-8S-ehy" secondAttribute="bottom" constant="20" id="l82-TA-0y4"/>
@@ -199,8 +218,9 @@
                 <constraint firstItem="T7n-8T-alc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="h69-3t-Y4K"/>
                 <constraint firstItem="OVt-mN-HVw" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zXJ-IB-HnQ"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="82.5" y="579.5"/>
+            <point key="canvasLocation" x="82.5" y="578"/>
         </view>
     </objects>
     <resources>

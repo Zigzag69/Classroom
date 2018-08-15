@@ -11,12 +11,16 @@ import UIKit
 class MainVC: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var gradient: UIImageView!
+    @IBOutlet weak var classroomCV: UICollectionView!
+    
+    let collectionViewCellID = "CollectionViewCell"
     
 //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         preparations()
+        registerCell()
     }
     
 //MARK: - UI Preparations
@@ -29,6 +33,12 @@ class MainVC: UIViewController {
         gradient.layer.shadowRadius = 2
         gradient.layer.shadowOpacity = 0.5
         gradient.layer.shadowOffset = CGSize(width: 0, height: 4)
+    }
+    
+//MARK: - Custom methods
+    func registerCell() {
+        let nibCell = UINib(nibName: collectionViewCellID, bundle: nil)
+        classroomCV.register(nibCell, forCellWithReuseIdentifier: collectionViewCellID)
     }
 }
 

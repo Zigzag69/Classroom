@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E187DD4E2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */; };
+		E187DD5321247515006C3B85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187DD5121247515006C3B85 /* CollectionViewCell.swift */; };
+		E187DD5421247515006C3B85 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E187DD5221247515006C3B85 /* CollectionViewCell.xib */; };
 		E1A11B702122B9E50034FE9B /* VerdanaPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1A11B6F2122B99A0034FE9B /* VerdanaPro-Bold.ttf */; };
 		E1A11B712122B9E80034FE9B /* VerdanaPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1A11B6E2122B9800034FE9B /* VerdanaPro-SemiBold.ttf */; };
 		E1A11B722122B9EC0034FE9B /* VerdanaPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E1A11B6D2122B9770034FE9B /* VerdanaPro-Regular.ttf */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
+		E187DD5121247515006C3B85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		E187DD5221247515006C3B85 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		E1A11B6D2122B9770034FE9B /* VerdanaPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VerdanaPro-Regular.ttf"; sourceTree = "<group>"; };
 		E1A11B6E2122B9800034FE9B /* VerdanaPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VerdanaPro-SemiBold.ttf"; sourceTree = "<group>"; };
 		E1A11B6F2122B99A0034FE9B /* VerdanaPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "VerdanaPro-Bold.ttf"; sourceTree = "<group>"; };
@@ -39,6 +45,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E187DD4F212454B0006C3B85 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E187DD50212454B9006C3B85 /* CollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E187DD50212454B9006C3B85 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E187DD5121247515006C3B85 /* CollectionViewCell.swift */,
+				E187DD5221247515006C3B85 /* CollectionViewCell.xib */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		E1A11B6C2122B9650034FE9B /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				E1A794EF211D6EF600998A32 /* AppDelegate.swift */,
+				E187DD4F212454B0006C3B85 /* Views */,
 				E1A79501211D704300998A32 /* Controllers */,
 				E1A11B6C2122B9650034FE9B /* Fonts */,
 				E1A794F6211D6EF600998A32 /* Assets.xcassets */,
@@ -90,6 +114,7 @@
 			children = (
 				E1A79503211D705A00998A32 /* MainVC.swift */,
 				E1A79504211D705A00998A32 /* MainVC.xib */,
+				E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */,
 			);
 			path = MainVC;
 			sourceTree = "<group>";
@@ -155,6 +180,7 @@
 			files = (
 				E1A11B702122B9E50034FE9B /* VerdanaPro-Bold.ttf in Resources */,
 				E1A11B712122B9E80034FE9B /* VerdanaPro-SemiBold.ttf in Resources */,
+				E187DD5421247515006C3B85 /* CollectionViewCell.xib in Resources */,
 				E1A794F7211D6EF600998A32 /* Assets.xcassets in Resources */,
 				E1A79506211D705A00998A32 /* MainVC.xib in Resources */,
 				E1A11B722122B9EC0034FE9B /* VerdanaPro-Regular.ttf in Resources */,
@@ -169,6 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A794F0211D6EF600998A32 /* AppDelegate.swift in Sources */,
+				E187DD4E2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift in Sources */,
+				E187DD5321247515006C3B85 /* CollectionViewCell.swift in Sources */,
 				E1A79505211D705A00998A32 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
