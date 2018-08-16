@@ -48,9 +48,8 @@ class MainVC: UIViewController {
     func registerCells() {
         let nibCell = UINib(nibName: collectionViewCellID, bundle: nil)
         classroomCV.register(nibCell, forCellWithReuseIdentifier: collectionViewCellID)
-        classroomCV.register(CollectionReusableView.self,
-                             forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
-                             withReuseIdentifier: sectionHeaderID)
+        let nibSectionHeader = UINib(nibName: "CollectionReusableView", bundle: nil)
+        classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: sectionHeaderID)
     }
 }
 

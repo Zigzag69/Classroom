@@ -41,4 +41,8 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView,
                         didDeselectItemAt indexPath: IndexPath) {
     }
+    
+
+    
+
 }
