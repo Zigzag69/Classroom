@@ -16,6 +16,7 @@ class MainVC: UIViewController {
     
     let collectionViewCellID = "CollectionViewCell"
     let sectionHeaderID = "CollectionReusableView"
+    let sectionNames: [String] = ["Media", "Attachments", "Links"]
     
 //MARK: - Life cycle
     override func viewDidLoad() {
@@ -47,9 +48,9 @@ class MainVC: UIViewController {
 //MARK: - Custom methods
     func registerCells() {
         let nibCell = UINib(nibName: collectionViewCellID, bundle: nil)
+        let nibSectionHeader = UINib(nibName: sectionHeaderID, bundle: nil)
         classroomCV.register(nibCell, forCellWithReuseIdentifier: collectionViewCellID)
-        let nibSectionHeader = UINib(nibName: "CollectionReusableView", bundle: nil)
-        classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind:UICollectionElementKindSectionHeader, withReuseIdentifier: sectionHeaderID)
+        classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: sectionHeaderID)
     }
 }
 
