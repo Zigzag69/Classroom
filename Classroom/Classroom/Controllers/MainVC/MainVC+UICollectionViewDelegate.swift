@@ -27,6 +27,14 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView,
+                        viewForSupplementaryElementOfKind kind: String,
+                        at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = classroomCV.dequeueReusableSupplementaryView(ofKind: kind,
+            withReuseIdentifier: sectionHeaderID, for: indexPath) as! CollectionReusableView
+        return header
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
     }
     

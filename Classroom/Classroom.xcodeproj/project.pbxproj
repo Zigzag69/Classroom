@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1862E69212576AF008BD471 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1862E67212576AF008BD471 /* CollectionReusableView.swift */; };
+		E1862E6A212576AF008BD471 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1862E68212576AF008BD471 /* CollectionReusableView.xib */; };
 		E187DD4E2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */; };
 		E187DD5321247515006C3B85 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187DD5121247515006C3B85 /* CollectionViewCell.swift */; };
 		E187DD5421247515006C3B85 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E187DD5221247515006C3B85 /* CollectionViewCell.xib */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1862E67212576AF008BD471 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
+		E1862E68212576AF008BD471 /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 		E187DD5121247515006C3B85 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		E187DD5221247515006C3B85 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
@@ -45,9 +49,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1862E6621257693008BD471 /* CollectionReusibleView */ = {
+			isa = PBXGroup;
+			children = (
+				E1862E67212576AF008BD471 /* CollectionReusableView.swift */,
+				E1862E68212576AF008BD471 /* CollectionReusableView.xib */,
+			);
+			path = CollectionReusibleView;
+			sourceTree = "<group>";
+		};
 		E187DD4F212454B0006C3B85 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E1862E6621257693008BD471 /* CollectionReusibleView */,
 				E187DD50212454B9006C3B85 /* CollectionViewCell */,
 			);
 			path = Views;
@@ -179,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A11B702122B9E50034FE9B /* VerdanaPro-Bold.ttf in Resources */,
+				E1862E6A212576AF008BD471 /* CollectionReusableView.xib in Resources */,
 				E1A11B712122B9E80034FE9B /* VerdanaPro-SemiBold.ttf in Resources */,
 				E187DD5421247515006C3B85 /* CollectionViewCell.xib in Resources */,
 				E1A794F7211D6EF600998A32 /* Assets.xcassets in Resources */,
@@ -197,6 +212,7 @@
 				E1A794F0211D6EF600998A32 /* AppDelegate.swift in Sources */,
 				E187DD4E2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift in Sources */,
 				E187DD5321247515006C3B85 /* CollectionViewCell.swift in Sources */,
+				E1862E69212576AF008BD471 /* CollectionReusableView.swift in Sources */,
 				E1A79505211D705A00998A32 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

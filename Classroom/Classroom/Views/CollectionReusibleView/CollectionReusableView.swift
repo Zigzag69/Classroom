@@ -1,14 +1,14 @@
 //
-//  CollectionViewCell.swift
+//  CollectionReusableView.swift
 //  Classroom
 //
-//  Created by PAMacBook on 15.08.18.
+//  Created by PAMacBook on 16.08.18.
 //  Copyright © 2018 Zigzag. All rights reserved.
 //
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class CollectionReusableView: UICollectionReusableView {
 
     override func awakeFromNib() {
         super.awakeFromNib()

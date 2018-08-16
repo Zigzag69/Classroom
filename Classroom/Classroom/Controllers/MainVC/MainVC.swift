@@ -15,12 +15,13 @@ class MainVC: UIViewController {
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
     
     let collectionViewCellID = "CollectionViewCell"
+    let sectionHeaderID = "CollectionReusableView"
     
 //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         preparations()
-        registerCell()
+        registerCells()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,9 +45,12 @@ class MainVC: UIViewController {
     }
     
 //MARK: - Custom methods
-    func registerCell() {
+    func registerCells() {
         let nibCell = UINib(nibName: collectionViewCellID, bundle: nil)
         classroomCV.register(nibCell, forCellWithReuseIdentifier: collectionViewCellID)
+        classroomCV.register(CollectionReusableView.self,
+                             forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                             withReuseIdentifier: sectionHeaderID)
     }
 }
 
