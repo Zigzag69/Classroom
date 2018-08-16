@@ -19,16 +19,18 @@ class MainVC: UIViewController {
 //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         preparations()
         registerCell()
     }
     
-//MARK: - UI Preparations
-    func preparations() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .blackOpaque
-        
+    }
+    
+//MARK: - UI Preparations
+    func preparations() {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         

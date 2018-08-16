@@ -123,7 +123,7 @@
                                     <rect key="frame" x="0.0" y="464" width="375" height="95"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="95" id="7pF-7P-5d0"/>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="95" id="7pF-7P-5d0"/>
                                     </constraints>
                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kk8-WE-a4y">
                                         <size key="itemSize" width="50" height="50"/>
@@ -152,7 +152,7 @@
                                 <constraint firstItem="t8Q-bf-bnW" firstAttribute="leading" secondItem="xF3-1T-5TB" secondAttribute="trailing" constant="16" id="KC1-tD-9Xx"/>
                                 <constraint firstItem="pZo-i9-kcn" firstAttribute="top" secondItem="doI-5A-oXh" secondAttribute="bottom" constant="20" id="Ksr-fZ-zSs"/>
                                 <constraint firstItem="t8Q-bf-bnW" firstAttribute="top" secondItem="sjq-Aq-Dke" secondAttribute="bottom" constant="4" id="OMF-7N-305"/>
-                                <constraint firstItem="2O4-Is-2o3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3YC-h3-v3D" secondAttribute="bottom" priority="999" constant="24" id="PNo-BJ-E5R"/>
+                                <constraint firstItem="2O4-Is-2o3" firstAttribute="top" secondItem="3YC-h3-v3D" secondAttribute="bottom" constant="24" id="PNo-BJ-E5R"/>
                                 <constraint firstItem="C1E-8S-ehy" firstAttribute="leading" secondItem="uUl-ex-xvn" secondAttribute="trailing" constant="16" id="Pz3-eE-GXj"/>
                                 <constraint firstItem="doI-5A-oXh" firstAttribute="top" secondItem="Y93-0a-M5B" secondAttribute="bottom" constant="20" id="Ssl-SS-CO3"/>
                                 <constraint firstItem="Y93-0a-M5B" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="XTe-W5-bX4"/>
