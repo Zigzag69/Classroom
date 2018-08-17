@@ -31,6 +31,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         at indexPath: IndexPath) -> UICollectionReusableView {
         let header = classroomCV.dequeueReusableSupplementaryView(ofKind: kind,
             withReuseIdentifier: sectionHeaderID, for: indexPath) as! CollectionReusableView
+        header.title.text = sectionNames[indexPath.section]
         return header
     }
     
