@@ -11,18 +11,19 @@ import UIKit
 extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 3
+        return sectionNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return mediaContent.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: collectionViewCellID,
                                                     for: indexPath) as! CollectionViewCell
+        cell.image.image = mediaContent[indexPath.row]
         return cell
     }
     

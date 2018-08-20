@@ -16,7 +16,8 @@ class MainVC: UIViewController {
     
     let collectionViewCellID = "CollectionViewCell"
     let sectionHeaderID = "CollectionReusableView"
-    let sectionNames: [String] = ["Media", "Attachments", "Links"]
+    let sectionNames = ["Media", "Attachments", "Links"]
+    let mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
     
 //MARK: - Life cycle
     override func viewDidLoad() {
