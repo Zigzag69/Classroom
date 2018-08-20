@@ -14,7 +14,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
     
-    let collectionViewCellID = "CollectionViewCell"
+    let collectionViewCellID = "MediaCollectionViewCell"
     let sectionHeaderID = "CollectionReusableView"
     let sectionNames = ["Media", "Attachments", "Links"]
     let mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]

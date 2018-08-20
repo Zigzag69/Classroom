@@ -22,8 +22,8 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: collectionViewCellID,
-                                                    for: indexPath) as! CollectionViewCell
-        cell.image.image = mediaContent[indexPath.row]
+                                                    for: indexPath) as! MediaCollectionViewCell
+        cell.contentImage.image = mediaContent[indexPath.row]
         return cell
     }
     

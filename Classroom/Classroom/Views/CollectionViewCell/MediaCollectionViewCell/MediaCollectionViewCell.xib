@@ -12,30 +12,28 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Classroom" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MediaCollectionViewCell" customModule="Classroom" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0Lw-cY-SIZ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RBP-KY-otD">
                         <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="0Lw-cY-SIZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2gc-ay-lD4"/>
-                <constraint firstAttribute="bottom" secondItem="0Lw-cY-SIZ" secondAttribute="bottom" id="ntD-n8-vle"/>
-                <constraint firstItem="0Lw-cY-SIZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uNd-8H-Hxt"/>
-                <constraint firstAttribute="trailing" secondItem="0Lw-cY-SIZ" secondAttribute="trailing" id="yAN-V4-naL"/>
+                <constraint firstAttribute="trailing" secondItem="RBP-KY-otD" secondAttribute="trailing" id="Iud-xi-FKn"/>
+                <constraint firstItem="RBP-KY-otD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Nph-Ya-dO2"/>
+                <constraint firstAttribute="bottom" secondItem="RBP-KY-otD" secondAttribute="bottom" id="VpE-aS-2s0"/>
+                <constraint firstItem="RBP-KY-otD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sr2-UT-wpo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="62" height="55"/>
             <connections>
-                <outlet property="image" destination="0Lw-cY-SIZ" id="0FE-p6-oEg"/>
+                <outlet property="contentImage" destination="RBP-KY-otD" id="XxM-1u-6CI"/>
             </connections>
-            <point key="canvasLocation" x="26" y="78.5"/>
         </collectionViewCell>
     </objects>
 </document>
