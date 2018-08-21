@@ -16,7 +16,16 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return mediaContent.count
+        switch section {
+        case 0:
+            return 4
+        case 1:
+            return 2
+        case 2:
+            return 1
+        default:
+            return 2
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -31,6 +40,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 return cell
             case 2:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: linksCollectionViewCellID, for: indexPath) as! LinksCollectionViewCell
+                cell.contentImage.image = #imageLiteral(resourceName: "TestImage5")
                 return cell
             default:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
@@ -46,16 +56,4 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         header.title.text = sectionNames[indexPath.section]
         return header
     }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        didSelectItemAt indexPath: IndexPath) {
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        didDeselectItemAt indexPath: IndexPath) {
-    }
-    
-
-    
-
 }

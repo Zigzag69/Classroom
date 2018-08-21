@@ -6,33 +6,78 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VerdanaPro-Bold.ttf">
+            <string>VerdanaPro-Bold</string>
+        </array>
+        <array key="VerdanaPro-Regular.ttf">
+            <string>VerdanaPro-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LinksCollectionViewCell" customModule="Classroom" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                <rect key="frame" x="0.0" y="0.0" width="343" height="300"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Links" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-ta-kN9">
-                        <rect key="frame" x="30" y="40" width="40" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4oW-Xl-PSI">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="182"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4oW-Xl-PSI" secondAttribute="height" multiplier="49:26" id="1mg-xo-LZb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The choices range from high end department store brands, to affordable names brands." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7h-A0-Tu7">
+                        <rect key="frame" x="12" y="198" width="319" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="A7h-A0-Tu7" secondAttribute="height" multiplier="319:60" id="qXv-Qk-qjg"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="VerdanaPro-Bold" family="Verdana Pro" pointSize="13"/>
+                        <color key="textColor" red="0.19607843137254902" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icPlanetGr" translatesAutoresizingMaskIntoConstraints="NO" id="bdQ-Bl-vlR">
+                        <rect key="frame" x="12" y="260" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="DQ1-KI-o5f"/>
+                            <constraint firstAttribute="height" constant="24" id="Fme-3J-1YW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="healthyfood.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NL-1b-PMm">
+                        <rect key="frame" x="38" y="262" width="117" height="17.5"/>
+                        <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="14"/>
+                        <color key="textColor" red="0.49019607843137253" green="0.49803921568627452" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="DZC-ta-kN9" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="DFh-KU-gkP"/>
-                <constraint firstItem="DZC-ta-kN9" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="QA2-1Y-cN4"/>
+                <constraint firstAttribute="trailing" secondItem="4oW-Xl-PSI" secondAttribute="trailing" id="8Q6-G6-sci"/>
+                <constraint firstItem="bdQ-Bl-vlR" firstAttribute="top" secondItem="A7h-A0-Tu7" secondAttribute="bottom" constant="2" id="KLF-UK-fmQ"/>
+                <constraint firstItem="6NL-1b-PMm" firstAttribute="top" secondItem="A7h-A0-Tu7" secondAttribute="bottom" constant="4" id="PgY-0R-vlM"/>
+                <constraint firstItem="bdQ-Bl-vlR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="Pxg-rh-CuD"/>
+                <constraint firstItem="6NL-1b-PMm" firstAttribute="leading" secondItem="bdQ-Bl-vlR" secondAttribute="trailing" constant="2" id="UzD-zo-Io0"/>
+                <constraint firstItem="A7h-A0-Tu7" firstAttribute="top" secondItem="4oW-Xl-PSI" secondAttribute="bottom" constant="16" id="dIk-gK-SgT"/>
+                <constraint firstAttribute="trailing" secondItem="A7h-A0-Tu7" secondAttribute="trailing" constant="12" id="doC-MU-uSx"/>
+                <constraint firstItem="4oW-Xl-PSI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="fsT-dA-qhy"/>
+                <constraint firstItem="4oW-Xl-PSI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sPn-UI-mTh"/>
+                <constraint firstItem="A7h-A0-Tu7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="zjr-Zu-iFy"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="contentImage" destination="4oW-Xl-PSI" id="skH-Lm-Syz"/>
+            </connections>
+            <point key="canvasLocation" x="36.5" y="129"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="icPlanetGr" width="24" height="24"/>
+    </resources>
 </document>

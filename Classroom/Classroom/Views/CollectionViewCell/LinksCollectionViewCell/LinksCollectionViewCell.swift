@@ -9,7 +9,8 @@
 import UIKit
 
 class LinksCollectionViewCell: UICollectionViewCell {
-
+    @IBOutlet weak var contentImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
