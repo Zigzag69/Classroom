@@ -19,6 +19,10 @@
 		E1A79506211D705A00998A32 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1A79504211D705A00998A32 /* MainVC.xib */; };
 		E1CC8D40212AB0DB009FC8C8 /* MediaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC8D3E212AB0DB009FC8C8 /* MediaCollectionViewCell.swift */; };
 		E1CC8D41212AB0DB009FC8C8 /* MediaCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CC8D3F212AB0DB009FC8C8 /* MediaCollectionViewCell.xib */; };
+		E1CC8D46212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC8D44212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.swift */; };
+		E1CC8D47212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CC8D45212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.xib */; };
+		E1CC8D4F212AB23A009FC8C8 /* LinksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC8D4D212AB23A009FC8C8 /* LinksCollectionViewCell.swift */; };
+		E1CC8D50212AB23A009FC8C8 /* LinksCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1CC8D4E212AB23A009FC8C8 /* LinksCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		E1A79504211D705A00998A32 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		E1CC8D3E212AB0DB009FC8C8 /* MediaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewCell.swift; sourceTree = "<group>"; };
 		E1CC8D3F212AB0DB009FC8C8 /* MediaCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaCollectionViewCell.xib; sourceTree = "<group>"; };
+		E1CC8D44212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttachmentsCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1CC8D45212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttachmentsCollectionViewCell.xib; sourceTree = "<group>"; };
+		E1CC8D4D212AB23A009FC8C8 /* LinksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksCollectionViewCell.swift; sourceTree = "<group>"; };
+		E1CC8D4E212AB23A009FC8C8 /* LinksCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinksCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +78,8 @@
 		E187DD50212454B9006C3B85 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				E1CC8D4C212AB229009FC8C8 /* LinksCollectionViewCell */,
+				E1CC8D43212AB1D7009FC8C8 /* AttachmentsCollectionViewCell */,
 				E1CC8D3D212AB07F009FC8C8 /* MediaCollectionViewCell */,
 			);
 			path = CollectionViewCell;
@@ -141,6 +151,24 @@
 			path = MediaCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		E1CC8D43212AB1D7009FC8C8 /* AttachmentsCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC8D44212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.swift */,
+				E1CC8D45212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.xib */,
+			);
+			path = AttachmentsCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		E1CC8D4C212AB229009FC8C8 /* LinksCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC8D4D212AB23A009FC8C8 /* LinksCollectionViewCell.swift */,
+				E1CC8D4E212AB23A009FC8C8 /* LinksCollectionViewCell.xib */,
+			);
+			path = LinksCollectionViewCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,12 +229,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1A11B702122B9E50034FE9B /* VerdanaPro-Bold.ttf in Resources */,
+				E1CC8D50212AB23A009FC8C8 /* LinksCollectionViewCell.xib in Resources */,
 				E1862E6A212576AF008BD471 /* CollectionReusableView.xib in Resources */,
 				E1A11B712122B9E80034FE9B /* VerdanaPro-SemiBold.ttf in Resources */,
 				E1CC8D41212AB0DB009FC8C8 /* MediaCollectionViewCell.xib in Resources */,
 				E1A794F7211D6EF600998A32 /* Assets.xcassets in Resources */,
 				E1A79506211D705A00998A32 /* MainVC.xib in Resources */,
 				E1A11B722122B9EC0034FE9B /* VerdanaPro-Regular.ttf in Resources */,
+				E1CC8D47212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CC8D4F212AB23A009FC8C8 /* LinksCollectionViewCell.swift in Sources */,
 				E1A794F0211D6EF600998A32 /* AppDelegate.swift in Sources */,
+				E1CC8D46212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.swift in Sources */,
 				E1CC8D40212AB0DB009FC8C8 /* MediaCollectionViewCell.swift in Sources */,
 				E187DD4E2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift in Sources */,
 				E1862E69212576AF008BD471 /* CollectionReusableView.swift in Sources */,
