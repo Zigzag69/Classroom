@@ -14,7 +14,9 @@ class MainVC: UIViewController {
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
     
-    let collectionViewCellID = "MediaCollectionViewCell"
+    let mediaCollectionViewCellID = "MediaCollectionViewCell"
+    let attachmentsCollectionViewCellID = "AttachmentsCollectionViewCell"
+    let linksCollectionViewCellID = "LinksCollectionViewCell"
     let sectionHeaderID = "CollectionReusableView"
     let sectionNames = ["Media", "Attachments", "Links"]
     let mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
@@ -48,9 +50,14 @@ class MainVC: UIViewController {
     
 //MARK: - Custom methods
     func registerCells() {
-        let nibCell = UINib(nibName: collectionViewCellID, bundle: nil)
+        let mediaNibCell = UINib(nibName: mediaCollectionViewCellID, bundle: nil)
+        let attachmentsNibCell = UINib(nibName: attachmentsCollectionViewCellID, bundle: nil)
+        let linksNibCell = UINib(nibName: linksCollectionViewCellID, bundle: nil)
         let nibSectionHeader = UINib(nibName: sectionHeaderID, bundle: nil)
-        classroomCV.register(nibCell, forCellWithReuseIdentifier: collectionViewCellID)
+        classroomCV.register(mediaNibCell, forCellWithReuseIdentifier: mediaCollectionViewCellID)
+        classroomCV.register(attachmentsNibCell,
+                             forCellWithReuseIdentifier: attachmentsCollectionViewCellID)
+        classroomCV.register(linksNibCell, forCellWithReuseIdentifier: linksCollectionViewCellID)
         classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: sectionHeaderID)
     }
 }

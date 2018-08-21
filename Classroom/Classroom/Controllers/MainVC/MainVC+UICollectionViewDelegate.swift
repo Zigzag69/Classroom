@@ -21,10 +21,21 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: collectionViewCellID,
-                                                    for: indexPath) as! MediaCollectionViewCell
-        cell.contentImage.image = mediaContent[indexPath.row]
-        return cell
+            switch indexPath.section {
+            case 0:
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
+                cell.contentImage.image = mediaContent[indexPath.row]
+                return cell
+            case 1:
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: attachmentsCollectionViewCellID, for: indexPath) as! AttachmentsCollectionViewCell
+                return cell
+            case 2:
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: linksCollectionViewCellID, for: indexPath) as! LinksCollectionViewCell
+                return cell
+            default:
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
+                return cell
+            }
     }
     
     func collectionView(_ collectionView: UICollectionView,

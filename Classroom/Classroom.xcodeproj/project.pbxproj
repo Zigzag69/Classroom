@@ -78,9 +78,9 @@
 		E187DD50212454B9006C3B85 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				E1CC8D4C212AB229009FC8C8 /* LinksCollectionViewCell */,
-				E1CC8D43212AB1D7009FC8C8 /* AttachmentsCollectionViewCell */,
 				E1CC8D3D212AB07F009FC8C8 /* MediaCollectionViewCell */,
+				E1CC8D43212AB1D7009FC8C8 /* AttachmentsCollectionViewCell */,
+				E1CC8D4C212AB229009FC8C8 /* LinksCollectionViewCell */,
 			);
 			path = CollectionViewCell;
 			sourceTree = "<group>";
