@@ -56,4 +56,31 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         header.title.text = sectionNames[indexPath.section]
         return header
     }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch indexPath.section {
+        case 0:
+            return CGSize(width: 162, height: 162)
+        case 1:
+            return CGSize(width: 343, height: 56)
+        case 2:
+            return CGSize(width: 343, height: 300)
+        default:
+            return CGSize(width: 0, height: 0)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 16.0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout
+        collectionViewLayout: UICollectionViewLayout,
+                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 16.0
+    }
 }

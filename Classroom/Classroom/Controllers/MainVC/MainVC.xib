@@ -62,7 +62,7 @@
                                         <constraint firstAttribute="width" constant="24" id="fMN-u5-7LB"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFn-UA-lKB">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFn-UA-lKB">
                                     <rect key="frame" x="56" y="204.5" width="73.5" height="19"/>
                                     <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                     <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,7 +120,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2O4-Is-2o3">
-                                    <rect key="frame" x="0.0" y="464" width="375" height="95"/>
+                                    <rect key="frame" x="0.0" y="464" width="375" height="111"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="95" id="7pF-7P-5d0"/>
@@ -166,7 +166,7 @@
                                 <constraint firstItem="doI-5A-oXh" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="kfA-XY-QNn"/>
                                 <constraint firstItem="sjq-Aq-Dke" firstAttribute="top" secondItem="C1E-8S-ehy" secondAttribute="bottom" constant="20" id="l82-TA-0y4"/>
                                 <constraint firstAttribute="trailing" secondItem="doI-5A-oXh" secondAttribute="trailing" constant="16" id="pNq-l2-ANt"/>
-                                <constraint firstAttribute="bottom" secondItem="2O4-Is-2o3" secondAttribute="bottom" constant="44" id="pQV-nA-8sf"/>
+                                <constraint firstAttribute="bottom" secondItem="2O4-Is-2o3" secondAttribute="bottom" constant="28" id="pQV-nA-8sf"/>
                                 <constraint firstItem="fub-Uz-ejC" firstAttribute="top" secondItem="t8Q-bf-bnW" secondAttribute="bottom" constant="20" id="sRu-vp-oM5"/>
                                 <constraint firstItem="xF3-1T-5TB" firstAttribute="top" secondItem="C1E-8S-ehy" secondAttribute="bottom" constant="20" id="wR5-Uq-VTY"/>
                                 <constraint firstItem="BFn-UA-lKB" firstAttribute="leading" secondItem="pZo-i9-kcn" secondAttribute="trailing" constant="16" id="wkc-hm-rLZ"/>
