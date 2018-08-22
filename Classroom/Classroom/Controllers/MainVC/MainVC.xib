@@ -62,7 +62,7 @@
                                         <constraint firstAttribute="width" constant="24" id="fMN-u5-7LB"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFn-UA-lKB">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFn-UA-lKB">
                                     <rect key="frame" x="56" y="204.5" width="73.5" height="19"/>
                                     <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                     <color key="textColor" red="0.49019607840000001" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

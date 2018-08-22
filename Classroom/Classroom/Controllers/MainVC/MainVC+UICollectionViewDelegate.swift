@@ -18,13 +18,13 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 4
+            return mediaContent.count
         case 1:
-            return 2
+            return attachmentsContent.count
         case 2:
-            return 1
+            return linksContent.count
         default:
-            return 2
+            return 0
         }
     }
     
@@ -43,13 +43,13 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 return cell
             case 1:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: attachmentsCollectionViewCellID, for: indexPath) as! AttachmentsCollectionViewCell
-                cell.title.text = "Harry Potter and the prisoner…"
+                cell.title.text = attachmentsContent[indexPath.row]
                 return cell
             case 2:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: linksCollectionViewCellID, for: indexPath) as! LinksCollectionViewCell
                 cell.contentImage.image = #imageLiteral(resourceName: "TestImage5")
                 cell.title.text = "The choices range from high end department store brands, to affordable names brands."
-                cell.siteLabel.text = "healthyfood.com"
+                cell.siteLabel.text = linksContent[indexPath.row]
                 cell.view.layer.borderWidth = 1
                 cell.view.layer.cornerRadius = 2
                 cell.view.layer.borderColor = UIColor(red: 196/255,

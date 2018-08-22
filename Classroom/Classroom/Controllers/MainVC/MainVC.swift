@@ -20,6 +20,8 @@ class MainVC: UIViewController {
     let sectionHeaderID = "CollectionReusableView"
     let sectionNames = ["Media", "Attachments", "Links"]
     let mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
+    let attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
+    let linksContent = ["healthyfood.com"]
     
 //MARK: - Life cycle
     override func viewDidLoad() {
