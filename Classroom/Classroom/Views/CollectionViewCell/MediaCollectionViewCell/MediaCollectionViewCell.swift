@@ -9,6 +9,7 @@
 import UIKit
 
 class MediaCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var view: UIView!
     @IBOutlet weak var contentImage: UIImageView!
 
     override func awakeFromNib() {

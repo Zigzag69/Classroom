@@ -19,20 +19,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RBP-KY-otD">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xmv-iC-Vt7">
                         <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
-                    </imageView>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-tF-lAP">
+                                <rect key="frame" x="0.0" y="0.0" width="162" height="162"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aTF-tF-lAP" secondAttribute="trailing" id="16x-fW-cUD"/>
+                            <constraint firstItem="aTF-tF-lAP" firstAttribute="top" secondItem="xmv-iC-Vt7" secondAttribute="top" id="ZWN-RM-XFR"/>
+                            <constraint firstAttribute="bottom" secondItem="aTF-tF-lAP" secondAttribute="bottom" id="sBM-5p-Lzi"/>
+                            <constraint firstItem="aTF-tF-lAP" firstAttribute="leading" secondItem="xmv-iC-Vt7" secondAttribute="leading" id="zjc-AO-TiO"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="RBP-KY-otD" secondAttribute="trailing" id="Iud-xi-FKn"/>
-                <constraint firstItem="RBP-KY-otD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Nph-Ya-dO2"/>
-                <constraint firstAttribute="bottom" secondItem="RBP-KY-otD" secondAttribute="bottom" id="VpE-aS-2s0"/>
-                <constraint firstItem="RBP-KY-otD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sr2-UT-wpo"/>
+                <constraint firstItem="xmv-iC-Vt7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Acc-IB-pMn"/>
+                <constraint firstItem="xmv-iC-Vt7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Dxo-9t-dza"/>
+                <constraint firstAttribute="trailing" secondItem="xmv-iC-Vt7" secondAttribute="trailing" id="R2w-M9-PpW"/>
+                <constraint firstAttribute="bottom" secondItem="xmv-iC-Vt7" secondAttribute="bottom" id="zew-sb-TAr"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
-                <outlet property="contentImage" destination="RBP-KY-otD" id="XxM-1u-6CI"/>
+                <outlet property="contentImage" destination="aTF-tF-lAP" id="YnU-hm-sT0"/>
+                <outlet property="view" destination="xmv-iC-Vt7" id="NeZ-aZ-bb4"/>
             </connections>
         </collectionViewCell>
     </objects>

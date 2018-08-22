@@ -34,13 +34,28 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             case 0:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
                 cell.contentImage.image = mediaContent[indexPath.row]
+                cell.view.layer.borderWidth = 1
+                cell.view.layer.cornerRadius = 2
+                cell.view.layer.borderColor = UIColor(red: 196/255,
+                                                      green: 199/255,
+                                                      blue: 204/255,
+                                                      alpha: 1).cgColor
                 return cell
             case 1:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: attachmentsCollectionViewCellID, for: indexPath) as! AttachmentsCollectionViewCell
+                cell.title.text = "Harry Potter and the prisoner…"
                 return cell
             case 2:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: linksCollectionViewCellID, for: indexPath) as! LinksCollectionViewCell
                 cell.contentImage.image = #imageLiteral(resourceName: "TestImage5")
+                cell.title.text = "The choices range from high end department store brands, to affordable names brands."
+                cell.siteLabel.text = "healthyfood.com"
+                cell.view.layer.borderWidth = 1
+                cell.view.layer.cornerRadius = 2
+                cell.view.layer.borderColor = UIColor(red: 196/255,
+                                                      green: 199/255,
+                                                      blue: 204/255,
+                                                      alpha: 1).cgColor
                 return cell
             default:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
