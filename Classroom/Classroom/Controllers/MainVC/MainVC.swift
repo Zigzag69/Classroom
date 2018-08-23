@@ -20,7 +20,7 @@ class MainVC: UIViewController {
     let linksCollectionViewCellID = "LinksCollectionViewCell"
     let sectionHeaderID = "CollectionReusableView"
     let sectionNames = ["Media", "Attachments", "Links"]
-    let mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
+    var mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
     let attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
     let linksContent = ["healthyfood.com"]
     
@@ -29,6 +29,7 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         preparations()
         registerCells()
+        updateHeight()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,9 +51,6 @@ class MainVC: UIViewController {
         gradient.layer.shadowRadius = 2
         gradient.layer.shadowOpacity = 0.5
         gradient.layer.shadowOffset = CGSize(width: 0, height: 4)
-        
-        let height = classroomCV.collectionViewLayout.collectionViewContentSize.height
-        classroomCVHeight.constant = height
     }
     
 //MARK: - Custom methods
@@ -66,6 +64,26 @@ class MainVC: UIViewController {
                              forCellWithReuseIdentifier: attachmentsCollectionViewCellID)
         classroomCV.register(linksNibCell, forCellWithReuseIdentifier: linksCollectionViewCellID)
         classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: sectionHeaderID)
+    }
+    
+    func updateHeight() {
+        let height = classroomCV.collectionViewLayout.collectionViewContentSize.height
+        classroomCVHeight.constant = height
+    }
+    
+//MARK: - IBActions
+    @IBAction func deletePhoto() {
+        if mediaContent.isEmpty == false {
+            mediaContent.removeLast()
+            classroomCV.reloadData()
+            updateHeight()
+        }
+    }
+    
+    @IBAction func addNewPhoto() {
+        mediaContent.append(#imageLiteral(resourceName: "TestImage5"))
+        classroomCV.reloadData()
+        updateHeight()
     }
 }
 

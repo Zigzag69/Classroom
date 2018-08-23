@@ -204,9 +204,15 @@
                         <navigationItem title="Homework details" id="DTh-7N-da4">
                             <barButtonItem key="leftBarButtonItem" image="icBack" id="Ybd-fR-zDl">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="deletePhoto" destination="-1" id="B19-rB-nH9"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem key="rightBarButtonItem" image="icMoreHorWht" id="qm0-7V-iKD">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="addNewPhoto" destination="-1" id="bJ0-AL-LyF"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
