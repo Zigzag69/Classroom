@@ -32,7 +32,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             switch indexPath.section {
             case 0:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "MediaCollectionViewCell", for: indexPath) as! MediaCollectionViewCell
                 cell.contentImage.image = mediaContent[indexPath.row]
                 cell.mediaView.layer.borderWidth = 1
                 cell.mediaView.layer.cornerRadius = 2
@@ -42,11 +42,11 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                                                            alpha: 1).cgColor
                 return cell
             case 1:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: attachmentsCollectionViewCellID, for: indexPath) as! AttachmentsCollectionViewCell
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "AttachmentsCollectionViewCell", for: indexPath) as! AttachmentsCollectionViewCell
                 cell.title.text = attachmentsContent[indexPath.row]
                 return cell
             case 2:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: linksCollectionViewCellID, for: indexPath) as! LinksCollectionViewCell
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "LinksCollectionViewCell", for: indexPath) as! LinksCollectionViewCell
                 cell.contentImage.image = #imageLiteral(resourceName: "TestImage5")
                 cell.title.text = "The choices range from high end department store brands, to affordable names brands."
                 cell.siteLabel.text = linksContent[indexPath.row]
@@ -58,7 +58,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                                                            alpha: 1).cgColor
                 return cell
             default:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
+                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "MediaCollectionViewCell", for: indexPath) as! MediaCollectionViewCell
                 return cell
             }
     }
@@ -67,7 +67,7 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
         let header = classroomCV.dequeueReusableSupplementaryView(ofKind: kind,
-            withReuseIdentifier: sectionHeaderID, for: indexPath) as! CollectionReusableView
+            withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
         header.title.text = sectionNames[indexPath.section]
         return header
     }
@@ -87,11 +87,5 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         default:
             return CGSize(width: 0, height: 0)
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 16.0
     }
 }

@@ -14,15 +14,11 @@ class MainVC: UIViewController {
     @IBOutlet weak var gradient: UIImageView!
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
-    
-    let mediaCollectionViewCellID = "MediaCollectionViewCell"
-    let attachmentsCollectionViewCellID = "AttachmentsCollectionViewCell"
-    let linksCollectionViewCellID = "LinksCollectionViewCell"
-    let sectionHeaderID = "CollectionReusableView"
+
     let sectionNames = ["Media", "Attachments", "Links"]
     var mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
-    let attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
-    let linksContent = ["healthyfood.com"]
+    var attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
+    var linksContent = ["healthyfood.com"]
     
 //MARK: - Life cycle
     override func viewDidLoad() {
@@ -55,21 +51,22 @@ class MainVC: UIViewController {
     
 //MARK: - Custom methods
     func registerCells() {
-        let mediaNibCell = UINib(nibName: mediaCollectionViewCellID, bundle: nil)
-        let attachmentsNibCell = UINib(nibName: attachmentsCollectionViewCellID, bundle: nil)
-        let linksNibCell = UINib(nibName: linksCollectionViewCellID, bundle: nil)
-        let nibSectionHeader = UINib(nibName: sectionHeaderID, bundle: nil)
-        classroomCV.register(mediaNibCell, forCellWithReuseIdentifier: mediaCollectionViewCellID)
+        let mediaNibCell = UINib(nibName: "MediaCollectionViewCell", bundle: nil)
+        let attachmentsNibCell = UINib(nibName: "AttachmentsCollectionViewCell", bundle: nil)
+        let linksNibCell = UINib(nibName: "LinksCollectionViewCell", bundle: nil)
+        let nibSectionHeader = UINib(nibName: "CollectionReusableView", bundle: nil)
+        classroomCV.register(mediaNibCell, forCellWithReuseIdentifier: "MediaCollectionViewCell")
         classroomCV.register(attachmentsNibCell,
-                             forCellWithReuseIdentifier: attachmentsCollectionViewCellID)
-        classroomCV.register(linksNibCell, forCellWithReuseIdentifier: linksCollectionViewCellID)
-        classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: sectionHeaderID)
+                             forCellWithReuseIdentifier: "AttachmentsCollectionViewCell")
+        classroomCV.register(linksNibCell, forCellWithReuseIdentifier: "LinksCollectionViewCell")
+        classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
     }
     
     func updateHeight() {
         let height = classroomCV.collectionViewLayout.collectionViewContentSize.height
         classroomCVHeight.constant = height
         classroomCV.layoutIfNeeded()
+        classroomCV.reloadData()
     }
     
 //MARK: - IBActions
@@ -83,6 +80,8 @@ class MainVC: UIViewController {
     
     @IBAction func addNewPhoto() {
         mediaContent.append(#imageLiteral(resourceName: "TestImage5"))
+        attachmentsContent.append("Harry Potter and the prisoner…")
+        linksContent.append("google.com")
         classroomCV.reloadData()
         updateHeight()
     }

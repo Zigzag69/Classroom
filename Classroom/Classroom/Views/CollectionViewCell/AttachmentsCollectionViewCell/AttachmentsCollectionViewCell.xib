@@ -34,8 +34,8 @@
                                     <constraint firstAttribute="height" constant="24" id="aF5-8Q-gV7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-U6-raq">
-                                <rect key="frame" x="56" y="16" width="33" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-U6-raq">
+                                <rect key="frame" x="56" y="16" width="287" height="20"/>
                                 <fontDescription key="fontDescription" name="VerdanaPro-Regular" family="Verdana Pro" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -46,6 +46,7 @@
                             <constraint firstItem="8gV-DV-gcq" firstAttribute="leading" secondItem="zUS-2o-py4" secondAttribute="leading" constant="16" id="5rf-lN-0H6"/>
                             <constraint firstItem="8gV-DV-gcq" firstAttribute="top" secondItem="zUS-2o-py4" secondAttribute="top" constant="16" id="IgK-eV-Ssb"/>
                             <constraint firstItem="lfr-U6-raq" firstAttribute="leading" secondItem="8gV-DV-gcq" secondAttribute="trailing" constant="16" id="auh-eE-VVM"/>
+                            <constraint firstAttribute="trailing" secondItem="lfr-U6-raq" secondAttribute="trailing" id="b49-aW-GvH"/>
                             <constraint firstItem="lfr-U6-raq" firstAttribute="top" secondItem="zUS-2o-py4" secondAttribute="top" constant="16" id="xSc-yX-4xQ"/>
                         </constraints>
                     </view>
@@ -61,6 +62,7 @@
             <connections>
                 <outlet property="title" destination="lfr-U6-raq" id="BNs-CN-g8t"/>
             </connections>
+            <point key="canvasLocation" x="33.5" y="76"/>
         </collectionViewCell>
     </objects>
     <resources>
