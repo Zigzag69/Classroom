@@ -9,6 +9,7 @@
 import UIKit
 
 class MainVC: UIViewController {
+    
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var gradient: UIImageView!
@@ -71,8 +72,10 @@ class MainVC: UIViewController {
     
 //MARK: - IBActions
     @IBAction func deletePhoto() {
-        if mediaContent.isEmpty == false {
+        if mediaContent.isEmpty == false && attachmentsContent.isEmpty == false && linksContent.isEmpty == false {
             mediaContent.removeLast()
+            attachmentsContent.removeLast()
+            linksContent.removeLast()
             classroomCV.reloadData()
             updateHeight()
         }
@@ -84,6 +87,14 @@ class MainVC: UIViewController {
         linksContent.append("google.com")
         classroomCV.reloadData()
         updateHeight()
+    }
+
+    @IBAction func tapDataPicker() {
+        print("1")
+    }
+    
+    @IBAction func tapTimePicker() {
+        print("2")
     }
 }
 
