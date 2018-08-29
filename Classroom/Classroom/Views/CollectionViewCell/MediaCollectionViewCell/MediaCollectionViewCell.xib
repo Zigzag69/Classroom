@@ -45,7 +45,7 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="contentImage" destination="aTF-tF-lAP" id="YnU-hm-sT0"/>
-                <outlet property="view" destination="xmv-iC-Vt7" id="NeZ-aZ-bb4"/>
+                <outlet property="mediaView" destination="xmv-iC-Vt7" id="upg-Hd-oDP"/>
             </connections>
         </collectionViewCell>
     </objects>

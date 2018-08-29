@@ -34,12 +34,12 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             case 0:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
                 cell.contentImage.image = mediaContent[indexPath.row]
-                cell.view.layer.borderWidth = 1
-                cell.view.layer.cornerRadius = 2
-                cell.view.layer.borderColor = UIColor(red: 196/255,
-                                                      green: 199/255,
-                                                      blue: 204/255,
-                                                      alpha: 1).cgColor
+                cell.mediaView.layer.borderWidth = 1
+                cell.mediaView.layer.cornerRadius = 2
+                cell.mediaView.layer.borderColor = UIColor(red: 196/255,
+                                                           green: 199/255,
+                                                           blue: 204/255,
+                                                           alpha: 1).cgColor
                 return cell
             case 1:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: attachmentsCollectionViewCellID, for: indexPath) as! AttachmentsCollectionViewCell
@@ -50,12 +50,12 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                 cell.contentImage.image = #imageLiteral(resourceName: "TestImage5")
                 cell.title.text = "The choices range from high end department store brands, to affordable names brands."
                 cell.siteLabel.text = linksContent[indexPath.row]
-                cell.view.layer.borderWidth = 1
-                cell.view.layer.cornerRadius = 2
-                cell.view.layer.borderColor = UIColor(red: 196/255,
-                                                      green: 199/255,
-                                                      blue: 204/255,
-                                                      alpha: 1).cgColor
+                cell.linksView.layer.borderWidth = 1
+                cell.linksView.layer.cornerRadius = 2
+                cell.linksView.layer.borderColor = UIColor(red: 196/255,
+                                                           green: 199/255,
+                                                           blue: 204/255,
+                                                           alpha: 1).cgColor
                 return cell
             default:
                 let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: mediaCollectionViewCellID, for: indexPath) as! MediaCollectionViewCell
@@ -79,9 +79,11 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         case 0:
             return CGSize(width: 162, height: 162)
         case 1:
-            return CGSize(width: 343, height: 56)
+            let width = UIScreen.main.bounds.size.width
+            return CGSize(width: width - 32, height: 56)
         case 2:
-            return CGSize(width: 343, height: 300)
+            let width = UIScreen.main.bounds.size.width
+            return CGSize(width: width - 32, height: 300)
         default:
             return CGSize(width: 0, height: 0)
         }
@@ -90,12 +92,6 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 16.0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout
-        collectionViewLayout: UICollectionViewLayout,
-                        minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 16.0
     }
 }

@@ -64,12 +64,12 @@ class MainVC: UIViewController {
                              forCellWithReuseIdentifier: attachmentsCollectionViewCellID)
         classroomCV.register(linksNibCell, forCellWithReuseIdentifier: linksCollectionViewCellID)
         classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: sectionHeaderID)
-        classroomCV.layoutIfNeeded()
     }
     
     func updateHeight() {
         let height = classroomCV.collectionViewLayout.collectionViewContentSize.height
         classroomCVHeight.constant = height
+        classroomCV.layoutIfNeeded()
     }
     
 //MARK: - IBActions

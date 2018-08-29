@@ -83,9 +83,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="contentImage" destination="b7Y-5X-5Cr" id="vPg-5A-25G"/>
+                <outlet property="linksView" destination="tzf-1b-4NZ" id="gFg-5S-Urj"/>
                 <outlet property="siteLabel" destination="xdx-fd-Qhb" id="jNL-gA-Xow"/>
                 <outlet property="title" destination="sIi-3J-ebD" id="AnB-r8-Vet"/>
-                <outlet property="view" destination="tzf-1b-4NZ" id="CGQ-UW-uAt"/>
             </connections>
             <point key="canvasLocation" x="36.5" y="129"/>
         </collectionViewCell>
