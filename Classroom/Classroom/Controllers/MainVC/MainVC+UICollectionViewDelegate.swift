@@ -77,7 +77,8 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.section {
         case 0:
-            return CGSize(width: 162, height: 162)
+            let width = UIScreen.main.bounds.size.width
+            return CGSize(width: width / 2 - 24, height: 162)
         case 1:
             let width = UIScreen.main.bounds.size.width
             return CGSize(width: width - 32, height: 56)

@@ -64,10 +64,8 @@ class MainVC: UIViewController {
     }
     
     func updateHeight() {
-        let height = classroomCV.collectionViewLayout.collectionViewContentSize.height
-        classroomCVHeight.constant = height
-        classroomCV.layoutIfNeeded()
-        classroomCV.reloadData()
+        classroomCVHeight.constant = classroomCV.collectionViewLayout.collectionViewContentSize.height
+        self.view.layoutIfNeeded()
     }
     
 //MARK: - IBActions
