@@ -27,16 +27,13 @@ class MainVC: UIViewController {
         preparations()
         registerCells()
         updateHeight()
+        hideKeyboard()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .blackOpaque
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
     }
     
 //MARK: - UI Preparations
@@ -48,24 +45,6 @@ class MainVC: UIViewController {
         gradient.layer.shadowRadius = 2
         gradient.layer.shadowOpacity = 0.5
         gradient.layer.shadowOffset = CGSize(width: 0, height: 4)
-    }
-    
-//MARK: - Custom methods
-    func registerCells() {
-        let mediaNibCell = UINib(nibName: "MediaCollectionViewCell", bundle: nil)
-        let attachmentsNibCell = UINib(nibName: "AttachmentsCollectionViewCell", bundle: nil)
-        let linksNibCell = UINib(nibName: "LinksCollectionViewCell", bundle: nil)
-        let nibSectionHeader = UINib(nibName: "CollectionReusableView", bundle: nil)
-        classroomCV.register(mediaNibCell, forCellWithReuseIdentifier: "MediaCollectionViewCell")
-        classroomCV.register(attachmentsNibCell,
-                             forCellWithReuseIdentifier: "AttachmentsCollectionViewCell")
-        classroomCV.register(linksNibCell, forCellWithReuseIdentifier: "LinksCollectionViewCell")
-        classroomCV.register(nibSectionHeader, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
-    }
-    
-    func updateHeight() {
-        classroomCVHeight.constant = classroomCV.collectionViewLayout.collectionViewContentSize.height
-        self.view.layoutIfNeeded()
     }
     
 //MARK: - IBActions
@@ -93,17 +72,5 @@ class MainVC: UIViewController {
     
     @IBAction func tapTimePicker() {
         print("2")
-    }
-}
-
-extension MainVC: UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
-        let fixedWidth = textView.frame.size.width
-        textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth,
-                                                   height: CGFloat.greatestFiniteMagnitude))
-        var newFrame = textView.frame
-        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
-        textView.frame = newFrame
     }
 }

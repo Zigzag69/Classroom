@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E144A70B2138269700A7ABFF /* MainVC+CustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = E144A70A2138269700A7ABFF /* MainVC+CustomMethods.swift */; };
 		E1862E69212576AF008BD471 /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1862E67212576AF008BD471 /* CollectionReusableView.swift */; };
 		E1862E6A212576AF008BD471 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1862E68212576AF008BD471 /* CollectionReusableView.xib */; };
 		E187DD4E2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E144A70A2138269700A7ABFF /* MainVC+CustomMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+CustomMethods.swift"; sourceTree = "<group>"; };
 		E1862E67212576AF008BD471 /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		E1862E68212576AF008BD471 /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			children = (
 				E1A79503211D705A00998A32 /* MainVC.swift */,
 				E1A79504211D705A00998A32 /* MainVC.xib */,
+				E144A70A2138269700A7ABFF /* MainVC+CustomMethods.swift */,
 				E187DD4D2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift */,
 			);
 			path = MainVC;
@@ -252,6 +255,7 @@
 				E1CC8D46212AB1FD009FC8C8 /* AttachmentsCollectionViewCell.swift in Sources */,
 				E1CC8D40212AB0DB009FC8C8 /* MediaCollectionViewCell.swift in Sources */,
 				E187DD4E2124549D006C3B85 /* MainVC+UICollectionViewDelegate.swift in Sources */,
+				E144A70B2138269700A7ABFF /* MainVC+CustomMethods.swift in Sources */,
 				E1862E69212576AF008BD471 /* CollectionReusableView.swift in Sources */,
 				E1A79505211D705A00998A32 /* MainVC.swift in Sources */,
 			);
