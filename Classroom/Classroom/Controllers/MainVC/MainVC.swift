@@ -13,6 +13,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var gradient: UIImageView!
+    @IBOutlet weak var datePickerButton: UIButton!
+    @IBOutlet weak var dueTimePicker: UIButton!
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
 
@@ -66,8 +68,18 @@ class MainVC: UIViewController {
         updateHeight()
     }
 
-    @IBAction func tapDataPicker() {
+    @IBAction func tapDatePicker() {
         print("1")
+//        let datePicker = UIDatePicker()
+//        datePicker.timeZone = NSTimeZone.local
+//        datePicker.backgroundColor = UIColor.white
+//        view.addSubview(datePicker)
+//        datePicker.translatesAutoresizingMaskIntoConstraints = false
+//        let margins = datePickerButton.layoutMarginsGuide
+//        let margin = dueTimePicker.layoutMarginsGuide
+//        datePicker.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
+//        datePicker.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: 0).isActive = true
+//        view.layoutIfNeeded()
     }
     
     @IBAction func tapTimePicker() {

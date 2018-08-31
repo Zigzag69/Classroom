@@ -70,6 +70,20 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
         header.title.text = sectionNames[indexPath.section]
         return header
+        
+//        switch section {
+//        case 0:
+//            if self.tableView(tableView, numberOfRowsInSection: section) > 0 {
+//                return "Title example for section 1"
+//            }
+//        case 1:
+//            if self.tableView(tableView, numberOfRowsInSection: section) > 0 {
+//                return "Title example for section 2"
+//            }
+//        default:
+//            return nil // when return nil no header will be shown
+//        }
+//        return nil
     }
     
     func collectionView(_ collectionView: UICollectionView,
