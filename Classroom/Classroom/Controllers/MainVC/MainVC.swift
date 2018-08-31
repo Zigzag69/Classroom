@@ -15,6 +15,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var gradient: UIImageView!
     @IBOutlet weak var datePickerButton: UIButton!
     @IBOutlet weak var dueTimePicker: UIButton!
+    @IBOutlet weak var firstPaddingHeight: NSLayoutConstraint!
+    @IBOutlet weak var secondPaddingHeight: NSLayoutConstraint!
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
 
@@ -70,6 +72,11 @@ class MainVC: UIViewController {
 
     @IBAction func tapDatePicker() {
         print("1")
+        if firstPaddingHeight.constant == 20 {
+            firstPaddingHeight.constant = 200
+        } else if firstPaddingHeight.constant == 200 {
+            firstPaddingHeight.constant = 20
+        }
 //        let datePicker = UIDatePicker()
 //        datePicker.timeZone = NSTimeZone.local
 //        datePicker.backgroundColor = UIColor.white
@@ -84,5 +91,10 @@ class MainVC: UIViewController {
     
     @IBAction func tapTimePicker() {
         print("2")
+        if secondPaddingHeight.constant == 20 {
+            secondPaddingHeight.constant = 200
+        } else if secondPaddingHeight.constant == 200 {
+            secondPaddingHeight.constant = 20
+        }
     }
 }
