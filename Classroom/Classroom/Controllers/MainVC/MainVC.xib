@@ -25,9 +25,11 @@
                 <outlet property="datePickerButton" destination="wgm-R6-lIV" id="39T-O8-Gxw"/>
                 <outlet property="dueTimePicker" destination="bmb-uO-Jd6" id="ZtM-WI-1t8"/>
                 <outlet property="firstPaddingHeight" destination="44K-hZ-NPh" id="ACP-3p-jQ3"/>
+                <outlet property="firstPaddingView" destination="2hO-kh-Wqn" id="dCT-Pj-x3H"/>
                 <outlet property="gradient" destination="T7n-8T-alc" id="AnD-5p-E2R"/>
                 <outlet property="navigationBar" destination="OVt-mN-HVw" id="G08-GM-INj"/>
                 <outlet property="secondPaddingHeight" destination="Xoe-cH-1OG" id="hfj-68-6AP"/>
+                <outlet property="secondPaddingView" destination="mqH-Nx-tXx" id="26T-ba-ShT"/>
                 <outlet property="textView" destination="doI-5A-oXh" id="hlq-UB-bAi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -93,7 +95,6 @@
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hO-kh-Wqn" userLabel="Padding 1">
                                     <rect key="frame" x="0.0" y="242" width="375" height="20"/>
-                                    <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="44K-hZ-NPh"/>
                                     </constraints>
@@ -129,9 +130,8 @@
                                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqH-Nx-tXx" userLabel="Padding 1">
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqH-Nx-tXx" userLabel="Padding 2">
                                     <rect key="frame" x="0.0" y="306" width="375" height="20"/>
-                                    <color key="backgroundColor" red="1" green="0.84313725490000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="Xoe-cH-1OG"/>
                                     </constraints>

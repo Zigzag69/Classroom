@@ -15,7 +15,9 @@ class MainVC: UIViewController {
     @IBOutlet weak var gradient: UIImageView!
     @IBOutlet weak var datePickerButton: UIButton!
     @IBOutlet weak var dueTimePicker: UIButton!
+    @IBOutlet weak var firstPaddingView: UIView!
     @IBOutlet weak var firstPaddingHeight: NSLayoutConstraint!
+    @IBOutlet weak var secondPaddingView: UIView!
     @IBOutlet weak var secondPaddingHeight: NSLayoutConstraint!
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
@@ -71,29 +73,29 @@ class MainVC: UIViewController {
     }
 
     @IBAction func tapDatePicker() {
-        print("1")
+        let datePicker = UIDatePicker()
+        datePicker.tag = 1
         if firstPaddingHeight.constant == 20 {
             firstPaddingHeight.constant = 200
+            datePicker.timeZone = NSTimeZone.local
+            datePicker.backgroundColor = UIColor.white
+            firstPaddingView.addSubview(datePicker)
         } else if firstPaddingHeight.constant == 200 {
+            firstPaddingView.viewWithTag(1)?.removeFromSuperview()
             firstPaddingHeight.constant = 20
         }
-//        let datePicker = UIDatePicker()
-//        datePicker.timeZone = NSTimeZone.local
-//        datePicker.backgroundColor = UIColor.white
-//        view.addSubview(datePicker)
-//        datePicker.translatesAutoresizingMaskIntoConstraints = false
-//        let margins = datePickerButton.layoutMarginsGuide
-//        let margin = dueTimePicker.layoutMarginsGuide
-//        datePicker.topAnchor.constraint(equalTo: margins.topAnchor, constant: 0).isActive = true
-//        datePicker.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: 0).isActive = true
-//        view.layoutIfNeeded()
     }
     
     @IBAction func tapTimePicker() {
-        print("2")
+        let timePicker = UIDatePicker()
+        timePicker.tag = 2
         if secondPaddingHeight.constant == 20 {
             secondPaddingHeight.constant = 200
+            timePicker.timeZone = NSTimeZone.local
+            timePicker.backgroundColor = UIColor.white
+            secondPaddingView.addSubview(timePicker)
         } else if secondPaddingHeight.constant == 200 {
+            secondPaddingView.viewWithTag(2)?.removeFromSuperview()
             secondPaddingHeight.constant = 20
         }
     }
