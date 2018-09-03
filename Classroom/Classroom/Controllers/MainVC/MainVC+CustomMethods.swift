@@ -31,6 +31,13 @@ extension MainVC: UITextViewDelegate {
         view.addGestureRecognizer(gesture)
     }
     
+    @objc func datePickerValueChanged(_ sender: UIDatePicker){
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
+        let selectedDate = dateFormatter.string(from: sender.date)
+        print("Selected value \(selectedDate)")
+    }
+    
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }

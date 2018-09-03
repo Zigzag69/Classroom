@@ -79,6 +79,9 @@ class MainVC: UIViewController {
             firstPaddingHeight.constant = 200
             datePicker.timeZone = NSTimeZone.local
             datePicker.backgroundColor = UIColor.white
+            datePicker.addTarget(self,
+                                 action: #selector(datePickerValueChanged(_:)),
+                                 for: .valueChanged)
             firstPaddingView.addSubview(datePicker)
         } else if firstPaddingHeight.constant == 200 {
             firstPaddingView.viewWithTag(1)?.removeFromSuperview()
