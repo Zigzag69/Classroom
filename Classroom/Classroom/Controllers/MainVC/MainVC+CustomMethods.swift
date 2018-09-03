@@ -43,31 +43,32 @@ extension MainVC: UITextViewDelegate {
                                  action: #selector(datePickerValueChanged(_:)),
                                  for: .valueChanged)
                 firstPaddingView.addSubview(picker)
+                datePickerIsActivated = true
             } else {
                 firstPaddingView.viewWithTag(tag)?.removeFromSuperview()
                 firstPaddingHeight.constant = 20
+                datePickerIsActivated = false
             }
         } else if tag == 2 {
             if timePickerIsActivated == false {
                 secondPaddingHeight.constant = 200
                 picker.timeZone = NSTimeZone.local
                 picker.backgroundColor = UIColor.white
-                picker.addTarget(self,
-                                 action: #selector(datePickerValueChanged(_:)),
-                                 for: .valueChanged)
                 secondPaddingView.addSubview(picker)
+                timePickerIsActivated = true
             } else {
                 secondPaddingView.viewWithTag(tag)?.removeFromSuperview()
                 secondPaddingHeight.constant = 20
+                timePickerIsActivated = false
             }
         }
     }
     
     @objc func datePickerValueChanged(_ sender: UIDatePicker){
         let dateFormatter: DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
+        dateFormatter.dateFormat = "EEE, d MMMM yyyy"
         let selectedDate = dateFormatter.string(from: sender.date)
-        print("Selected value \(selectedDate)")
+        dateLabel.text = selectedDate
     }
     
     @objc func dismissKeyboard() {

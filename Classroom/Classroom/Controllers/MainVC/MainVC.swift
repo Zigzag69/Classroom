@@ -13,6 +13,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var gradient: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var datePickerButton: UIButton!
     @IBOutlet weak var dueTimePicker: UIButton!
     @IBOutlet weak var firstPaddingView: UIView!

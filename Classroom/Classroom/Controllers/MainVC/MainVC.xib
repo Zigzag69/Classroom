@@ -22,6 +22,7 @@
             <connections>
                 <outlet property="classroomCV" destination="2O4-Is-2o3" id="RKC-cx-FNy"/>
                 <outlet property="classroomCVHeight" destination="7pF-7P-5d0" id="WhD-ne-iA0"/>
+                <outlet property="dateLabel" destination="KLW-dx-HEY" id="HFJ-fF-uiE"/>
                 <outlet property="datePickerButton" destination="wgm-R6-lIV" id="39T-O8-Gxw"/>
                 <outlet property="dueTimePicker" destination="bmb-uO-Jd6" id="ZtM-WI-1t8"/>
                 <outlet property="firstPaddingHeight" destination="44K-hZ-NPh" id="ACP-3p-jQ3"/>
@@ -31,6 +32,7 @@
                 <outlet property="secondPaddingHeight" destination="Xoe-cH-1OG" id="hfj-68-6AP"/>
                 <outlet property="secondPaddingView" destination="mqH-Nx-tXx" id="26T-ba-ShT"/>
                 <outlet property="textView" destination="doI-5A-oXh" id="hlq-UB-bAi"/>
+                <outlet property="timeLabel" destination="C1E-8S-ehy" id="mzU-eP-zoJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
