@@ -26,6 +26,8 @@ class MainVC: UIViewController {
     var mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
     var attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
     var linksContent = ["healthyfood.com"]
+    var datePickerIsActivated = false
+    var timePickerIsActivated = false
     
 //MARK: - Life cycle
     override func viewDidLoad() {
@@ -73,33 +75,10 @@ class MainVC: UIViewController {
     }
 
     @IBAction func tapDatePicker() {
-        let datePicker = UIDatePicker()
-        datePicker.tag = 1
-        if firstPaddingHeight.constant == 20 {
-            firstPaddingHeight.constant = 200
-            datePicker.timeZone = NSTimeZone.local
-            datePicker.backgroundColor = UIColor.white
-            datePicker.addTarget(self,
-                                 action: #selector(datePickerValueChanged(_:)),
-                                 for: .valueChanged)
-            firstPaddingView.addSubview(datePicker)
-        } else if firstPaddingHeight.constant == 200 {
-            firstPaddingView.viewWithTag(1)?.removeFromSuperview()
-            firstPaddingHeight.constant = 20
-        }
+        addPicker(tag: 1)
     }
     
     @IBAction func tapTimePicker() {
-        let timePicker = UIDatePicker()
-        timePicker.tag = 2
-        if secondPaddingHeight.constant == 20 {
-            secondPaddingHeight.constant = 200
-            timePicker.timeZone = NSTimeZone.local
-            timePicker.backgroundColor = UIColor.white
-            secondPaddingView.addSubview(timePicker)
-        } else if secondPaddingHeight.constant == 200 {
-            secondPaddingView.viewWithTag(2)?.removeFromSuperview()
-            secondPaddingHeight.constant = 20
-        }
+        addPicker(tag: 2)
     }
 }

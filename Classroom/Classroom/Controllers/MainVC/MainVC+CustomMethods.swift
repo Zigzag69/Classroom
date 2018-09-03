@@ -31,6 +31,38 @@ extension MainVC: UITextViewDelegate {
         view.addGestureRecognizer(gesture)
     }
     
+    func addPicker(tag: Int) {
+        let picker = UIDatePicker()
+        picker.tag = tag
+        if tag == 1 {
+            if datePickerIsActivated == false {
+                firstPaddingHeight.constant = 200
+                picker.timeZone = NSTimeZone.local
+                picker.backgroundColor = UIColor.white
+                picker.addTarget(self,
+                                 action: #selector(datePickerValueChanged(_:)),
+                                 for: .valueChanged)
+                firstPaddingView.addSubview(picker)
+            } else {
+                firstPaddingView.viewWithTag(tag)?.removeFromSuperview()
+                firstPaddingHeight.constant = 20
+            }
+        } else if tag == 2 {
+            if timePickerIsActivated == false {
+                secondPaddingHeight.constant = 200
+                picker.timeZone = NSTimeZone.local
+                picker.backgroundColor = UIColor.white
+                picker.addTarget(self,
+                                 action: #selector(datePickerValueChanged(_:)),
+                                 for: .valueChanged)
+                secondPaddingView.addSubview(picker)
+            } else {
+                secondPaddingView.viewWithTag(tag)?.removeFromSuperview()
+                secondPaddingHeight.constant = 20
+            }
+        }
+    }
+    
     @objc func datePickerValueChanged(_ sender: UIDatePicker){
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy hh:mm a"
