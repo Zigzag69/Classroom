@@ -37,6 +37,7 @@ extension MainVC: UITextViewDelegate {
         if tag == 1 {
             if datePickerIsActivated == false {
                 firstPaddingHeight.constant = 200
+                picker.datePickerMode = .date
                 picker.timeZone = NSTimeZone.local
                 picker.backgroundColor = UIColor.white
                 picker.addTarget(self,
@@ -52,8 +53,12 @@ extension MainVC: UITextViewDelegate {
         } else if tag == 2 {
             if timePickerIsActivated == false {
                 secondPaddingHeight.constant = 200
+                picker.datePickerMode = .time
                 picker.timeZone = NSTimeZone.local
                 picker.backgroundColor = UIColor.white
+                picker.addTarget(self,
+                                 action: #selector(timePickerValueChanged(_:)),
+                                 for: .valueChanged)
                 secondPaddingView.addSubview(picker)
                 timePickerIsActivated = true
             } else {
@@ -64,11 +69,18 @@ extension MainVC: UITextViewDelegate {
         }
     }
     
-    @objc func datePickerValueChanged(_ sender: UIDatePicker){
-        let dateFormatter: DateFormatter = DateFormatter()
+    @objc func datePickerValueChanged(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE, d MMMM yyyy"
         let selectedDate = dateFormatter.string(from: sender.date)
         dateLabel.text = selectedDate
+    }
+    
+    @objc func timePickerValueChanged(_ sender: UIDatePicker) {
+        let timeFormatter = DateFormatter()
+        timeFormatter.timeStyle = .short
+        let selectedTime = timeFormatter.string(from: sender.date)
+        timeLabel.text = selectedTime
     }
     
     @objc func dismissKeyboard() {
