@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -198,6 +198,16 @@
                                     <color key="textColor" red="0.1960784314" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDn-K1-5ci">
+                                    <rect key="frame" x="56" y="390" width="155" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="H67-5W-YYE"/>
+                                        <constraint firstAttribute="width" constant="155" id="v1M-DZ-BgR"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="tapSecondSetReminder" destination="-1" eventType="touchUpInside" id="siJ-r8-pUB"/>
+                                    </connections>
+                                </button>
                                 <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2O4-Is-2o3">
                                     <rect key="frame" x="0.0" y="458" width="375" height="117"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -215,10 +225,21 @@
                                         <outlet property="delegate" destination="-1" id="Pv2-gZ-Wcv"/>
                                     </connections>
                                 </collectionView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0D-t4-Vel">
+                                    <rect key="frame" x="56" y="326" width="155" height="52"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="52" id="35u-PQ-biu"/>
+                                        <constraint firstAttribute="width" constant="155" id="URn-gK-Ffd"/>
+                                    </constraints>
+                                    <connections>
+                                        <action selector="tapFirstSetReminder" destination="-1" eventType="touchUpInside" id="YGt-eV-KAY"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="BFn-UA-lKB" firstAttribute="top" secondItem="doI-5A-oXh" secondAttribute="bottom" constant="20" id="0vl-43-eux"/>
+                                <constraint firstItem="i0D-t4-Vel" firstAttribute="leading" secondItem="xF3-1T-5TB" secondAttribute="trailing" constant="16" id="1uQ-Wt-AZN"/>
                                 <constraint firstAttribute="trailing" secondItem="2O4-Is-2o3" secondAttribute="trailing" id="2lP-SZ-Fp5"/>
                                 <constraint firstItem="KLW-dx-HEY" firstAttribute="leading" secondItem="pZo-i9-kcn" secondAttribute="trailing" constant="16" id="3js-6s-a3a"/>
                                 <constraint firstItem="Y93-0a-M5B" firstAttribute="top" secondItem="bwR-5r-SoL" secondAttribute="top" constant="20" id="7uT-MI-aa7"/>
@@ -244,6 +265,7 @@
                                 <constraint firstItem="Y93-0a-M5B" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="XTe-W5-bX4"/>
                                 <constraint firstItem="pZo-i9-kcn" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="XiC-rR-0pz"/>
                                 <constraint firstItem="KLW-dx-HEY" firstAttribute="top" secondItem="BFn-UA-lKB" secondAttribute="bottom" constant="4" id="YcU-R0-Hii"/>
+                                <constraint firstItem="i0D-t4-Vel" firstAttribute="top" secondItem="mqH-Nx-tXx" secondAttribute="bottom" id="azg-B5-4ib"/>
                                 <constraint firstItem="vG1-Yh-l2H" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="bTt-S3-n6c"/>
                                 <constraint firstItem="bmb-uO-Jd6" firstAttribute="top" secondItem="2hO-kh-Wqn" secondAttribute="bottom" id="fRS-cV-SQi"/>
                                 <constraint firstItem="3YC-h3-v3D" firstAttribute="top" secondItem="fub-Uz-ejC" secondAttribute="bottom" constant="4" id="hIm-L0-DFU"/>
@@ -251,6 +273,7 @@
                                 <constraint firstItem="vG1-Yh-l2H" firstAttribute="top" secondItem="t8Q-bf-bnW" secondAttribute="bottom" constant="20" id="jHW-4u-T9n"/>
                                 <constraint firstItem="doI-5A-oXh" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="kfA-XY-QNn"/>
                                 <constraint firstAttribute="trailing" secondItem="2hO-kh-Wqn" secondAttribute="trailing" id="mBC-i5-noN"/>
+                                <constraint firstItem="KDn-K1-5ci" firstAttribute="top" secondItem="t8Q-bf-bnW" secondAttribute="bottom" constant="20" id="ogP-Y5-apf"/>
                                 <constraint firstAttribute="trailing" secondItem="doI-5A-oXh" secondAttribute="trailing" constant="16" id="pNq-l2-ANt"/>
                                 <constraint firstItem="cpa-Gy-Nab" firstAttribute="top" secondItem="2hO-kh-Wqn" secondAttribute="bottom" id="pQ4-cM-jdB"/>
                                 <constraint firstAttribute="bottom" secondItem="2O4-Is-2o3" secondAttribute="bottom" constant="28" id="pQV-nA-8sf"/>
@@ -260,6 +283,7 @@
                                 <constraint firstItem="wgm-R6-lIV" firstAttribute="top" secondItem="doI-5A-oXh" secondAttribute="bottom" constant="20" id="vyG-1D-SeE"/>
                                 <constraint firstItem="BFn-UA-lKB" firstAttribute="leading" secondItem="pZo-i9-kcn" secondAttribute="trailing" constant="16" id="wkc-hm-rLZ"/>
                                 <constraint firstItem="xF3-1T-5TB" firstAttribute="leading" secondItem="bwR-5r-SoL" secondAttribute="leading" constant="16" id="y9L-AL-qDk"/>
+                                <constraint firstItem="KDn-K1-5ci" firstAttribute="leading" secondItem="vG1-Yh-l2H" secondAttribute="trailing" constant="16" id="yA5-aX-l2y"/>
                                 <constraint firstItem="sjq-Aq-Dke" firstAttribute="leading" secondItem="xF3-1T-5TB" secondAttribute="trailing" constant="16" id="yWc-iZ-Olk"/>
                             </constraints>
                         </view>

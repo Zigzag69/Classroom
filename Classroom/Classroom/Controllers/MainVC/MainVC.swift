@@ -83,4 +83,12 @@ class MainVC: UIViewController {
     @IBAction func tapTimePicker() {
         addPicker(tag: 2)
     }
+    
+    @IBAction func tapFirstSetReminder() {
+        print("1")
+    }
+    
+    @IBAction func tapSecondSetReminder() {
+        print("2")
+    }
 }
