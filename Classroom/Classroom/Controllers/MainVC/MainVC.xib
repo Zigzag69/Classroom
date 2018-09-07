@@ -182,7 +182,7 @@
                                         <constraint firstAttribute="width" constant="155" id="URn-gK-Ffd"/>
                                     </constraints>
                                     <connections>
-                                        <action selector="tapFirstSetReminder" destination="-1" eventType="touchUpInside" id="YGt-eV-KAY"/>
+                                        <action selector="tapFirstSetReminderButton" destination="-1" eventType="touchUpInside" id="vqa-kb-EzR"/>
                                     </connections>
                                 </button>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icReminder" translatesAutoresizingMaskIntoConstraints="NO" id="vG1-Yh-l2H">
@@ -217,7 +217,7 @@
                                         <constraint firstAttribute="width" constant="155" id="v1M-DZ-BgR"/>
                                     </constraints>
                                     <connections>
-                                        <action selector="tapSecondSetReminder" destination="-1" eventType="touchUpInside" id="siJ-r8-pUB"/>
+                                        <action selector="tapSecondSetReminderButton" destination="-1" eventType="touchUpInside" id="0CE-Ic-WwX"/>
                                     </connections>
                                 </button>
                                 <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="2O4-Is-2o3">
