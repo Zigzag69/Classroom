@@ -87,10 +87,10 @@ class MainVC: UIViewController {
     }
     
     @IBAction func tapFirstSetReminderButton() {
-        tapFirstSetReminder()
+        tapSetReminder(handler: tapFirstActionSheet)
     }
     
     @IBAction func tapSecondSetReminderButton() {
-        tapSecondSetReminder()
+        tapSetReminder(handler: tapSecondActionSheet)
     }
 }

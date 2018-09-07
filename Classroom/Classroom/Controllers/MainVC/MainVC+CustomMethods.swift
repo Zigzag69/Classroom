@@ -68,79 +68,35 @@ extension MainVC: UITextViewDelegate {
             }
         }
     }
-    
-    func tapFirstSetReminder() {
+
+    func tapSetReminder(handler: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(title: nil,
                                                 message: nil,
                                                 preferredStyle: .actionSheet)
         let noneActionSheet = UIAlertAction(title: "None",
                                             style: .default,
-                                            handler: tapFirstActionSheet)
+                                            handler: handler)
         let atTimeOfEventActionSheet = UIAlertAction(title: "At time of event",
                                                      style: .default,
-                                                     handler: tapFirstActionSheet)
+                                                     handler: handler)
         let tenMinutesActionSheet = UIAlertAction(title: "10 minutes before",
                                                   style: .default,
-                                                  handler: tapFirstActionSheet)
+                                                  handler: handler)
         let thirtyMinutesActionSheet = UIAlertAction(title: "30 minutes before",
                                                      style: .default,
-                                                     handler: tapFirstActionSheet)
+                                                     handler: handler)
         let oneHourActionSheet = UIAlertAction(title: "1 hour before",
                                                style: .default,
-                                               handler: tapFirstActionSheet)
+                                               handler: handler)
         let oneDayActionSheet = UIAlertAction(title: "1 day before",
                                               style: .default,
-                                              handler: tapFirstActionSheet)
+                                              handler: handler)
         let twoDayActionSheet = UIAlertAction(title: "2 days before",
                                               style: .default,
-                                              handler: tapFirstActionSheet)
+                                              handler: handler)
         let twoWeekActionSheet = UIAlertAction(title: "2 week before",
                                                style: .default,
-                                               handler: tapFirstActionSheet)
-        let cancelActionSheet = UIAlertAction(title: "Cancel",
-                                              style: .cancel,
-                                              handler: nil)
-        
-        alertController.addAction(noneActionSheet)
-        alertController.addAction(atTimeOfEventActionSheet)
-        alertController.addAction(tenMinutesActionSheet)
-        alertController.addAction(thirtyMinutesActionSheet)
-        alertController.addAction(oneHourActionSheet)
-        alertController.addAction(oneDayActionSheet)
-        alertController.addAction(twoDayActionSheet)
-        alertController.addAction(twoWeekActionSheet)
-        alertController.addAction(cancelActionSheet)
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
-    func tapSecondSetReminder() {
-        let alertController = UIAlertController(title: nil,
-                                                message: nil,
-                                                preferredStyle: .actionSheet)
-        let noneActionSheet = UIAlertAction(title: "None",
-                                            style: .default,
-                                            handler: tapSecondActionSheet)
-        let atTimeOfEventActionSheet = UIAlertAction(title: "At time of event",
-                                                     style: .default,
-                                                     handler: tapSecondActionSheet)
-        let tenMinutesActionSheet = UIAlertAction(title: "10 minutes before",
-                                                  style: .default,
-                                                  handler: tapSecondActionSheet)
-        let thirtyMinutesActionSheet = UIAlertAction(title: "30 minutes before",
-                                                     style: .default,
-                                                     handler: tapSecondActionSheet)
-        let oneHourActionSheet = UIAlertAction(title: "1 hour before",
-                                               style: .default,
-                                               handler: tapSecondActionSheet)
-        let oneDayActionSheet = UIAlertAction(title: "1 day before",
-                                              style: .default,
-                                              handler: tapSecondActionSheet)
-        let twoDayActionSheet = UIAlertAction(title: "2 days before",
-                                              style: .default,
-                                              handler: tapSecondActionSheet)
-        let twoWeekActionSheet = UIAlertAction(title: "2 week before",
-                                               style: .default,
-                                               handler: tapSecondActionSheet)
+                                               handler: handler)
         let cancelActionSheet = UIAlertAction(title: "Cancel",
                                               style: .cancel,
                                               handler: nil)
