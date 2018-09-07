@@ -185,12 +185,13 @@ extension MainVC: UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
-        let fixedWidth = textView.frame.size.width
-        textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.greatestFiniteMagnitude))
-        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth,
+        textView.sizeThatFits(CGSize(width: textView.frame.size.width,
+                                     height: CGFloat.greatestFiniteMagnitude))
+        let newSize = textView.sizeThatFits(CGSize(width: textView.frame.size.width,
                                                    height: CGFloat.greatestFiniteMagnitude))
         var newFrame = textView.frame
-        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+        newFrame.size = CGSize(width: max(newSize.width, textView.frame.size.width),
+                               height: newSize.height)
         textView.frame = newFrame
     }
 }
