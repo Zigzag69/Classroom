@@ -139,6 +139,54 @@ class MainVC: UIViewController {
     }
     
     @IBAction func tapSecondSetReminder() {
-        print("2")
+        let alertController = UIAlertController(title: nil,
+                                                message: nil,
+                                                preferredStyle: .actionSheet)
+        let noneActionSheet = UIAlertAction(title: "None",
+                                            style: .default) { action in
+            self.secondNoneLabel.text = "None"
+        }
+        let atTimeOfEventActionSheet = UIAlertAction(title: "At time of event",
+                                                     style: .default) { action in
+            self.secondNoneLabel.text = "At time of event"
+        }
+        let tenMinutesActionSheet = UIAlertAction(title: "10 minutes before",
+                                                  style: .default) { action in
+            self.secondNoneLabel.text = "10 minutes before"
+        }
+        let thirtyMinutesActionSheet = UIAlertAction(title: "30 minutes before",
+                                                     style: .default) { action in
+            self.secondNoneLabel.text = "30 minutes before"
+        }
+        let oneHourActionSheet = UIAlertAction(title: "1 hour before",
+                                               style: .default) { action in
+            self.secondNoneLabel.text = "1 hour before"
+        }
+        let oneDayActionSheet = UIAlertAction(title: "1 day before",
+                                              style: .default) { action in
+            self.secondNoneLabel.text = "1 day before"
+        }
+        let twoDayActionSheet = UIAlertAction(title: "2 days before",
+                                              style: .default) { action in
+            self.secondNoneLabel.text = "2 days before"
+        }
+        let twoWeekActionSheet = UIAlertAction(title: "2 week before",
+                                               style: .default) { action in
+            self.secondNoneLabel.text = "2 week before"
+        }
+        let cancelActionSheet = UIAlertAction(title: "Cancel",
+                                              style: .cancel,
+                                              handler: nil)
+        
+        alertController.addAction(noneActionSheet)
+        alertController.addAction(atTimeOfEventActionSheet)
+        alertController.addAction(tenMinutesActionSheet)
+        alertController.addAction(thirtyMinutesActionSheet)
+        alertController.addAction(oneHourActionSheet)
+        alertController.addAction(oneDayActionSheet)
+        alertController.addAction(twoDayActionSheet)
+        alertController.addAction(twoWeekActionSheet)
+        alertController.addAction(cancelActionSheet)
+        self.present(alertController, animated: true, completion: nil)
     }
 }
