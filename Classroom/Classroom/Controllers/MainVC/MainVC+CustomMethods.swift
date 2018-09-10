@@ -112,7 +112,9 @@ extension MainVC: UITextViewDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE, d MMMM yyyy"
         let selectedDate = dateFormatter.string(from: sender.date)
-        dateLabel.text = selectedDate
+        if NSDate().compare(sender.date) != ComparisonResult.orderedDescending {
+            dateLabel.text = selectedDate
+        }
     }
     
     @objc func timePickerValueChanged(_ sender: UIDatePicker) {
