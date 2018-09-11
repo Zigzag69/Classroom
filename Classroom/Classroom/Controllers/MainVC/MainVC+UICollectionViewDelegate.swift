@@ -11,7 +11,7 @@ import UIKit
 extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return headerNames.count
+        return counter
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -70,33 +70,6 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
             withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
         header.title.text = headerNames[indexPath.section]
         return header
-    }
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        referenceSizeForHeaderInSection section: Int) -> CGSize {
-        switch section {
-        case 0:
-        if mediaContent.isEmpty == false {
-            return CGSize(width: classroomCV.frame.width, height: 44)
-        } else {
-            return CGSize.zero
-        }
-        case 1:
-        if attachmentsContent.isEmpty == false {
-            return CGSize(width: classroomCV.frame.width, height: 44)
-        } else {
-            return CGSize.zero
-        }
-        case 2:
-        if linksContent.isEmpty == false {
-            return CGSize(width: classroomCV.frame.width, height: 44)
-        } else {
-            return CGSize.zero
-        }
-        default:
-        return CGSize.zero
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView,

@@ -27,6 +27,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
 
     let headerNames = ["Media", "Attachments", "Links"]
+    var counter = 3
     var mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
     var attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
     var linksContent = ["healthyfood.com"]
@@ -63,23 +64,43 @@ class MainVC: UIViewController {
     @IBAction func deletePhoto() {
         if mediaContent.isEmpty == false  {
             mediaContent.removeLast()
+            if mediaContent.isEmpty {
+                counter = counter - 1
+            }
         }
         if attachmentsContent.isEmpty == false {
             attachmentsContent.removeLast()
+            if attachmentsContent.isEmpty {
+                counter = counter - 1
+            }
         }
         if linksContent.isEmpty == false {
             linksContent.removeLast()
+            if linksContent.isEmpty {
+                counter = counter - 1
+            }
         }
         classroomCV.reloadData()
         updateHeight()
+        print("counter = \(counter)")
     }
     
     @IBAction func addNewPhoto() {
+        if mediaContent.isEmpty {
+            counter = counter + 1
+        }
+        if attachmentsContent.isEmpty {
+            counter = counter + 1
+        }
+        if linksContent.isEmpty {
+            counter = counter + 1
+        }
         mediaContent.append(#imageLiteral(resourceName: "TestImage5"))
         attachmentsContent.append("Harry Potter and the prisoner…")
         linksContent.append("google.com")
         classroomCV.reloadData()
         updateHeight()
+        print("counter = \(counter)")
     }
 
     @IBAction func tapDatePicker() {
