@@ -26,7 +26,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
 
-    let sectionNames = ["Media", "Attachments", "Links"]
+    let headerNames = ["Media", "Attachments", "Links"]
     var mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
     var attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
     var linksContent = ["healthyfood.com"]
@@ -61,13 +61,17 @@ class MainVC: UIViewController {
     
 //MARK: - IBActions
     @IBAction func deletePhoto() {
-        if mediaContent.isEmpty == false && attachmentsContent.isEmpty == false && linksContent.isEmpty == false {
+        if mediaContent.isEmpty == false  {
             mediaContent.removeLast()
-            attachmentsContent.removeLast()
-            linksContent.removeLast()
-            classroomCV.reloadData()
-            updateHeight()
         }
+        if attachmentsContent.isEmpty == false {
+            attachmentsContent.removeLast()
+        }
+        if linksContent.isEmpty == false {
+            linksContent.removeLast()
+        }
+        classroomCV.reloadData()
+        updateHeight()
     }
     
     @IBAction func addNewPhoto() {

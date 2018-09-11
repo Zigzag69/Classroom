@@ -11,7 +11,7 @@ import UIKit
 extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return sectionNames.count
+        return headerNames.count
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -68,22 +68,35 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         at indexPath: IndexPath) -> UICollectionReusableView {
         let header = classroomCV.dequeueReusableSupplementaryView(ofKind: kind,
             withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
-        header.title.text = sectionNames[indexPath.section]
+        header.title.text = headerNames[indexPath.section]
         return header
-        
-//        switch section {
-//        case 0:
-//            if self.tableView(tableView, numberOfRowsInSection: section) > 0 {
-//                return "Title example for section 1"
-//            }
-//        case 1:
-//            if self.tableView(tableView, numberOfRowsInSection: section) > 0 {
-//                return "Title example for section 2"
-//            }
-//        default:
-//            return nil // when return nil no header will be shown
-//        }
-//        return nil
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        referenceSizeForHeaderInSection section: Int) -> CGSize {
+        switch section {
+        case 0:
+        if mediaContent.isEmpty == false {
+            return CGSize(width: classroomCV.frame.width, height: 44)
+        } else {
+            return CGSize.zero
+        }
+        case 1:
+        if attachmentsContent.isEmpty == false {
+            return CGSize(width: classroomCV.frame.width, height: 44)
+        } else {
+            return CGSize.zero
+        }
+        case 2:
+        if linksContent.isEmpty == false {
+            return CGSize(width: classroomCV.frame.width, height: 44)
+        } else {
+            return CGSize.zero
+        }
+        default:
+        return CGSize.zero
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
