@@ -25,7 +25,6 @@ class MainVC: UIViewController {
     @IBOutlet weak var classroomCV: UICollectionView!
     @IBOutlet weak var classroomCVHeight: NSLayoutConstraint!
 
-    let headerNames = ["Media", "Attachments", "Links"]
     var counter = 3
     var mediaContent = [#imageLiteral(resourceName: "TestImage1"), #imageLiteral(resourceName: "TestImage2"), #imageLiteral(resourceName: "TestImage3"), #imageLiteral(resourceName: "TestImage4")]
     var attachmentsContent = ["Harry Potter and the prisoner…", "Harry Potter and the prisoner…"]
