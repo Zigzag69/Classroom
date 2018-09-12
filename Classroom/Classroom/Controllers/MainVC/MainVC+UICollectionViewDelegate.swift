@@ -18,9 +18,19 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         numberOfItemsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return mediaContent.count
+            if mediaContent.isEmpty == false {
+                return mediaContent.count
+            } else if attachmentsContent.isEmpty == false {
+                return attachmentsContent.count
+            } else {
+                return linksContent.count
+            }
         case 1:
-            return attachmentsContent.count
+            if mediaContent.isEmpty || attachmentsContent.isEmpty{
+                return linksContent.count
+            } else {
+                return attachmentsContent.count
+            }
         case 2:
             return linksContent.count
         default:
@@ -32,13 +42,25 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             switch indexPath.section {
             case 0:
-                return returnMediaCollectionViewCell(indexPath: indexPath)
+                if mediaContent.isEmpty {
+                    if attachmentsContent.isEmpty {
+                        return returnLinksCollectionViewCell(indexPath: indexPath)
+                    } else {
+                        return returnAttachmentsCollectionViewCell(indexPath: indexPath)
+                    }
+                } else {
+                    return returnMediaCollectionViewCell(indexPath: indexPath)
+                }
             case 1:
-                return returnAttachmentsCollectionViewCell(indexPath: indexPath)
+                if mediaContent.isEmpty || attachmentsContent.isEmpty {
+                    return returnLinksCollectionViewCell(indexPath: indexPath)
+                } else {
+                    return returnAttachmentsCollectionViewCell(indexPath: indexPath)
+                }
             case 2:
                 return returnLinksCollectionViewCell(indexPath: indexPath)
             default:
-                preconditionFailure()
+                return returnMediaCollectionViewCell(indexPath: indexPath)
             }
     }
     
@@ -47,8 +69,32 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         at indexPath: IndexPath) -> UICollectionReusableView {
         let header = classroomCV.dequeueReusableSupplementaryView(ofKind: kind,
             withReuseIdentifier: "CollectionReusableView", for: indexPath) as! CollectionReusableView
-        header.title.text = headerNames[indexPath.section]
-        return header
+        switch indexPath.section {
+        case 0:
+            if mediaContent.isEmpty == false {
+                header.title.text = "Media"
+                return header
+            } else if attachmentsContent.isEmpty == false {
+                header.title.text = "Attachments"
+                return header
+            } else {
+                header.title.text = "Links"
+                return header
+            }
+        case 1:
+            if mediaContent.isEmpty || attachmentsContent.isEmpty{
+                header.title.text = "Links"
+                return header
+            } else {
+                header.title.text = "Attachments"
+                return header
+            }
+        case 2:
+            header.title.text = "Links"
+            return header
+        default:
+            return header
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -57,11 +103,21 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
         let width = UIScreen.main.bounds.size.width
         switch indexPath.section {
         case 0:
-            return CGSize(width: width / 2 - 24, height: 162)
+            if mediaContent.isEmpty == false {
+                return CGSize(width: width / 2 - 24, height: 162)
+            } else if attachmentsContent.isEmpty == false {
+                return CGSize(width: width - 32, height: 56)
+            } else {
+               return CGSize(width: width - 32, height: 300)
+            }
         case 1:
-            return CGSize(width: width - 32, height: 56)
+            if mediaContent.isEmpty || attachmentsContent.isEmpty{
+                return CGSize(width: width - 32, height: 300)
+            } else {
+                return CGSize(width: width - 32, height: 56)
+            }
         case 2:
-            return CGSize(width: width - 32, height: 300)
+           return CGSize(width: width - 32, height: 300)
         default:
             return CGSize(width: 0, height: 0)
         }

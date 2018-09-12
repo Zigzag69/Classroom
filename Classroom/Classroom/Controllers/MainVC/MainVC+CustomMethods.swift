@@ -141,10 +141,10 @@ extension MainVC: UITextViewDelegate {
     
     
     @objc func datePickerValueChanged(_ sender: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "EEE, d MMMM yyyy"
         if Date().timeIntervalSince(sender.date) < 86400 {
-             dateLabel.text = dateFormatter.string(from: sender.date)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "EEE, d MMMM yyyy"
+            dateLabel.text = dateFormatter.string(from: sender.date)
         }
         
 //        if NSDate().compare(sender.date) != ComparisonResult.orderedDescending {

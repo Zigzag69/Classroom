@@ -9,7 +9,6 @@
 import UIKit
 
 class MainVC: UIViewController {
-    
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var gradient: UIImageView!
@@ -37,6 +36,7 @@ class MainVC: UIViewController {
 //MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         preparations()
         registerCells()
         updateHeight()
@@ -45,6 +45,7 @@ class MainVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         navigationController?.navigationBar.isHidden = true
         navigationController?.navigationBar.barStyle = .blackOpaque
     }
@@ -62,27 +63,26 @@ class MainVC: UIViewController {
     
 //MARK: - IBActions
     @IBAction func deletePhoto() {
-//        if mediaContent.isEmpty == false  {
-//            mediaContent.removeLast()
-//            if mediaContent.isEmpty {
-//                counter = counter - 1
-//            }
-//        }
+        if mediaContent.isEmpty == false  {
+            mediaContent.removeLast()
+            if mediaContent.isEmpty {
+                counter = counter - 1
+            }
+        }
         if attachmentsContent.isEmpty == false {
             attachmentsContent.removeLast()
             if attachmentsContent.isEmpty {
                 counter = counter - 1
             }
         }
-//        if linksContent.isEmpty == false {
-//            linksContent.removeLast()
-//            if linksContent.isEmpty {
-//                counter = counter - 1
-//            }
-//        }
+        if linksContent.isEmpty == false {
+            linksContent.removeLast()
+            if linksContent.isEmpty {
+                counter = counter - 1
+            }
+        }
         classroomCV.reloadData()
         updateHeight()
-        print("counter = \(counter)")
     }
     
     @IBAction func addNewPhoto() {
@@ -100,7 +100,6 @@ class MainVC: UIViewController {
         linksContent.append("healthyfood.com")
         classroomCV.reloadData()
         updateHeight()
-        print("counter = \(counter)")
     }
 
     @IBAction func tapDatePicker() {
