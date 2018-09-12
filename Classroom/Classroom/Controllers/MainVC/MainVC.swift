@@ -20,6 +20,8 @@ class MainVC: UIViewController {
     @IBOutlet weak var firstPaddingHeight: NSLayoutConstraint!
     @IBOutlet weak var secondPaddingView: UIView!
     @IBOutlet weak var secondPaddingHeight: NSLayoutConstraint!
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var timePicker: UIDatePicker!
     @IBOutlet weak var firstNoneLabel: UILabel!
     @IBOutlet weak var secondNoneLabel: UILabel!
     @IBOutlet weak var classroomCV: UICollectionView!
@@ -102,11 +104,29 @@ class MainVC: UIViewController {
     }
 
     @IBAction func tapDatePicker() {
-        addPicker(tag: 1)
+        if datePickerIsActivated == false {
+            firstPaddingHeight.constant = 200
+            datePicker.addTarget(self,
+                                 action: #selector(datePickerValueChanged(_:)),
+                                 for: .valueChanged)
+            datePickerIsActivated = true
+        } else {
+            firstPaddingHeight.constant = 20
+            datePickerIsActivated = false
+        }
     }
     
     @IBAction func tapTimePicker() {
-        addPicker(tag: 2)
+        if timePickerIsActivated == false {
+            secondPaddingHeight.constant = 200
+            timePicker.addTarget(self,
+                                 action: #selector(timePickerValueChanged(_:)),
+                                 for: .valueChanged)
+            timePickerIsActivated = true
+        } else {
+            secondPaddingHeight.constant = 20
+            timePickerIsActivated = false
+        }
     }
     
     @IBAction func tapFirstSetReminderButton() {

@@ -23,6 +23,7 @@
                 <outlet property="classroomCV" destination="2O4-Is-2o3" id="RKC-cx-FNy"/>
                 <outlet property="classroomCVHeight" destination="7pF-7P-5d0" id="WhD-ne-iA0"/>
                 <outlet property="dateLabel" destination="KLW-dx-HEY" id="HFJ-fF-uiE"/>
+                <outlet property="datePicker" destination="45z-FU-i3X" id="BAY-OF-fa2"/>
                 <outlet property="datePickerButton" destination="wgm-R6-lIV" id="39T-O8-Gxw"/>
                 <outlet property="dueTimePicker" destination="bmb-uO-Jd6" id="ZtM-WI-1t8"/>
                 <outlet property="firstNoneLabel" destination="t8Q-bf-bnW" id="13f-KF-r2J"/>
@@ -35,6 +36,7 @@
                 <outlet property="secondPaddingView" destination="mqH-Nx-tXx" id="26T-ba-ShT"/>
                 <outlet property="textView" destination="doI-5A-oXh" id="hlq-UB-bAi"/>
                 <outlet property="timeLabel" destination="C1E-8S-ehy" id="mzU-eP-zoJ"/>
+                <outlet property="timePicker" destination="MSd-qx-eIQ" id="hnh-7p-z4a"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -99,8 +101,20 @@
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2hO-kh-Wqn" userLabel="Padding 1">
                                     <rect key="frame" x="0.0" y="261.5" width="320" height="20"/>
+                                    <subviews>
+                                        <datePicker tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="45z-FU-i3X">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="558449743.03021097">
+                                                <!--2018-09-12 12:55:43 +0000-->
+                                            </date>
+                                        </datePicker>
+                                    </subviews>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="44K-hZ-NPh"/>
+                                        <constraint firstItem="45z-FU-i3X" firstAttribute="top" secondItem="2hO-kh-Wqn" secondAttribute="top" id="58U-c9-xIv"/>
+                                        <constraint firstAttribute="bottom" secondItem="45z-FU-i3X" secondAttribute="bottom" id="Vva-GP-qnz"/>
+                                        <constraint firstAttribute="trailing" secondItem="45z-FU-i3X" secondAttribute="trailing" id="ole-am-AxJ"/>
+                                        <constraint firstItem="45z-FU-i3X" firstAttribute="leading" secondItem="2hO-kh-Wqn" secondAttribute="leading" id="qMf-bZ-ZA3"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgm-R6-lIV">
@@ -136,8 +150,20 @@
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqH-Nx-tXx" userLabel="Padding 2">
                                     <rect key="frame" x="0.0" y="325.5" width="320" height="20"/>
+                                    <subviews>
+                                        <datePicker tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="MSd-qx-eIQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="558449883.61019695">
+                                                <!--2018-09-12 12:58:03 +0000-->
+                                            </date>
+                                        </datePicker>
+                                    </subviews>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="20" id="Xoe-cH-1OG"/>
+                                        <constraint firstItem="MSd-qx-eIQ" firstAttribute="leading" secondItem="mqH-Nx-tXx" secondAttribute="leading" id="gcu-za-maV"/>
+                                        <constraint firstAttribute="trailing" secondItem="MSd-qx-eIQ" secondAttribute="trailing" id="h7d-jG-1on"/>
+                                        <constraint firstItem="MSd-qx-eIQ" firstAttribute="top" secondItem="mqH-Nx-tXx" secondAttribute="top" id="iFV-13-579"/>
+                                        <constraint firstAttribute="bottom" secondItem="MSd-qx-eIQ" secondAttribute="bottom" id="wMe-RD-HJO"/>
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmb-uO-Jd6">

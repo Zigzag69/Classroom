@@ -31,44 +31,6 @@ extension MainVC: UITextViewDelegate {
         view.addGestureRecognizer(gesture)
     }
     
-    func addPicker(tag: Int) {
-        let picker = UIDatePicker()
-        picker.tag = tag
-        if tag == 1 {
-            if datePickerIsActivated == false {
-                firstPaddingHeight.constant = 200
-                picker.datePickerMode = .date
-                picker.timeZone = NSTimeZone.local
-                picker.backgroundColor = UIColor.white
-                picker.addTarget(self,
-                                 action: #selector(datePickerValueChanged(_:)),
-                                 for: .valueChanged)
-                firstPaddingView.addSubview(picker)
-                datePickerIsActivated = true
-            } else {
-                firstPaddingView.viewWithTag(tag)?.removeFromSuperview()
-                firstPaddingHeight.constant = 20
-                datePickerIsActivated = false
-            }
-        } else if tag == 2 {
-            if timePickerIsActivated == false {
-                secondPaddingHeight.constant = 200
-                picker.datePickerMode = .time
-                picker.timeZone = NSTimeZone.local
-                picker.backgroundColor = UIColor.white
-                picker.addTarget(self,
-                                 action: #selector(timePickerValueChanged(_:)),
-                                 for: .valueChanged)
-                secondPaddingView.addSubview(picker)
-                timePickerIsActivated = true
-            } else {
-                secondPaddingView.viewWithTag(tag)?.removeFromSuperview()
-                secondPaddingHeight.constant = 20
-                timePickerIsActivated = false
-            }
-        }
-    }
-    
     func returnMediaCollectionViewCell(indexPath: IndexPath) -> UICollectionViewCell {
         let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "MediaCollectionViewCell", for: indexPath) as! MediaCollectionViewCell
         cell.contentImage.image = mediaContent[indexPath.row]
