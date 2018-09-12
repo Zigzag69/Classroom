@@ -75,15 +75,13 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = UIScreen.main.bounds.size.width
         switch indexPath.section {
         case 0:
-            let width = UIScreen.main.bounds.size.width
             return CGSize(width: width / 2 - 24, height: 162)
         case 1:
-            let width = UIScreen.main.bounds.size.width
             return CGSize(width: width - 32, height: 56)
         case 2:
-            let width = UIScreen.main.bounds.size.width
             return CGSize(width: width - 32, height: 300)
         default:
             return CGSize(width: 0, height: 0)

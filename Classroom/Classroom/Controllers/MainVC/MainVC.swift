@@ -62,24 +62,24 @@ class MainVC: UIViewController {
     
 //MARK: - IBActions
     @IBAction func deletePhoto() {
-        if mediaContent.isEmpty == false  {
-            mediaContent.removeLast()
-            if mediaContent.isEmpty {
-                counter = counter - 1
-            }
-        }
+//        if mediaContent.isEmpty == false  {
+//            mediaContent.removeLast()
+//            if mediaContent.isEmpty {
+//                counter = counter - 1
+//            }
+//        }
         if attachmentsContent.isEmpty == false {
             attachmentsContent.removeLast()
             if attachmentsContent.isEmpty {
                 counter = counter - 1
             }
         }
-        if linksContent.isEmpty == false {
-            linksContent.removeLast()
-            if linksContent.isEmpty {
-                counter = counter - 1
-            }
-        }
+//        if linksContent.isEmpty == false {
+//            linksContent.removeLast()
+//            if linksContent.isEmpty {
+//                counter = counter - 1
+//            }
+//        }
         classroomCV.reloadData()
         updateHeight()
         print("counter = \(counter)")
