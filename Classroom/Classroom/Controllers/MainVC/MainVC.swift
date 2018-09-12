@@ -97,7 +97,7 @@ class MainVC: UIViewController {
         }
         mediaContent.append(#imageLiteral(resourceName: "TestImage5"))
         attachmentsContent.append("Harry Potter and the prisoner…")
-        linksContent.append("google.com")
+        linksContent.append("healthyfood.com")
         classroomCV.reloadData()
         updateHeight()
         print("counter = \(counter)")

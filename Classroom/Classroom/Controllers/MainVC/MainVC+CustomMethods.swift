@@ -68,6 +68,38 @@ extension MainVC: UITextViewDelegate {
             }
         }
     }
+    
+    func returnMediaCollectionViewCell(indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "MediaCollectionViewCell", for: indexPath) as! MediaCollectionViewCell
+        cell.contentImage.image = mediaContent[indexPath.row]
+        cell.mediaView.layer.borderWidth = 1
+        cell.mediaView.layer.cornerRadius = 2
+        cell.mediaView.layer.borderColor = UIColor(red: 196/255,
+                                                   green: 199/255,
+                                                   blue: 204/255,
+                                                   alpha: 1).cgColor
+        return cell
+    }
+    
+    func returnAttachmentsCollectionViewCell(indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "AttachmentsCollectionViewCell", for: indexPath) as! AttachmentsCollectionViewCell
+        cell.title.text = attachmentsContent[indexPath.row]
+        return cell
+    }
+    
+    func returnLinksCollectionViewCell(indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "LinksCollectionViewCell", for: indexPath) as! LinksCollectionViewCell
+        cell.contentImage.image = #imageLiteral(resourceName: "TestImage5")
+        cell.title.text = "The choices range from high end department store brands, to affordable names brands."
+        cell.siteLabel.text = linksContent[indexPath.row]
+        cell.linksView.layer.borderWidth = 1
+        cell.linksView.layer.cornerRadius = 2
+        cell.linksView.layer.borderColor = UIColor(red: 196/255,
+                                                   green: 199/255,
+                                                   blue: 204/255,
+                                                   alpha: 1).cgColor
+        return cell
+    }
 
     func tapSetReminder(handler: @escaping (UIAlertAction) -> Void) {
         let alertController = UIAlertController(title: nil,

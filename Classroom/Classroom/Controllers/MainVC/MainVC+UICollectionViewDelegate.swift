@@ -32,34 +32,13 @@ extension MainVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             switch indexPath.section {
             case 0:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "MediaCollectionViewCell", for: indexPath) as! MediaCollectionViewCell
-                cell.contentImage.image = mediaContent[indexPath.row]
-                cell.mediaView.layer.borderWidth = 1
-                cell.mediaView.layer.cornerRadius = 2
-                cell.mediaView.layer.borderColor = UIColor(red: 196/255,
-                                                           green: 199/255,
-                                                           blue: 204/255,
-                                                           alpha: 1).cgColor
-                return cell
+                return returnMediaCollectionViewCell(indexPath: indexPath)
             case 1:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "AttachmentsCollectionViewCell", for: indexPath) as! AttachmentsCollectionViewCell
-                cell.title.text = attachmentsContent[indexPath.row]
-                return cell
+                return returnAttachmentsCollectionViewCell(indexPath: indexPath)
             case 2:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "LinksCollectionViewCell", for: indexPath) as! LinksCollectionViewCell
-                cell.contentImage.image = #imageLiteral(resourceName: "TestImage5")
-                cell.title.text = "The choices range from high end department store brands, to affordable names brands."
-                cell.siteLabel.text = linksContent[indexPath.row]
-                cell.linksView.layer.borderWidth = 1
-                cell.linksView.layer.cornerRadius = 2
-                cell.linksView.layer.borderColor = UIColor(red: 196/255,
-                                                           green: 199/255,
-                                                           blue: 204/255,
-                                                           alpha: 1).cgColor
-                return cell
+                return returnLinksCollectionViewCell(indexPath: indexPath)
             default:
-                let cell = classroomCV.dequeueReusableCell(withReuseIdentifier: "MediaCollectionViewCell", for: indexPath) as! MediaCollectionViewCell
-                return cell
+                preconditionFailure()
             }
     }
     
