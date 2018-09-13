@@ -44,15 +44,11 @@ class MainVC: UIViewController {
         hideKeyboard()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.navigationBar.barStyle = .blackOpaque
-    }
-    
 //MARK: - UI Preparations
     func preparations() {
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .blackOpaque
+        
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         
